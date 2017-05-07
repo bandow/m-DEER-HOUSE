@@ -114,7 +114,105 @@ html {
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background: #000;
-  background-size: 100% auto; }
+  background: #463c32; }
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 100%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .info .up {
+    position: absolute;
+    right: 5%;
+    bottom: -.5rem;
+    width: 1.2rem;
+    height: 1.2rem; }
+    .info .up:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      margin-top: -6px;
+      width: 12px;
+      height: 12px;
+      border: 2px solid;
+      border-bottom: 0;
+      border-right: 0;
+      color: #fff;
+      -moz-transform: rotateZ(-135deg);
+      -o-transform: rotateZ(-135deg);
+      -ms-transform: rotateZ(-135deg);
+      -webkit-transform: rotateZ(-135deg);
+      transform: rotateZ(-135deg); }
+
+.swiper-container .swiper-slide .img {
+  font-size: 0; }
+  .swiper-container .swiper-slide .img img {
+    width: 100%; }
+.swiper-container .swiper-slide .text {
+  padding: 5%; }
+  .swiper-container .swiper-slide .text h3 {
+    font: 0.8rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #fff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+  .swiper-container .swiper-slide .text h4 {
+    width: 25%;
+    font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #fff;
+    border-top: 1px solid #776e5d; }
+  .swiper-container .swiper-slide .text p {
+    font: 0.6rem/1.8 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #b2a9a2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 5% 0;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; }
+  .footer a {
+    padding: 1% 5%;
+    display: block;
+    background: #f56363;
+    border-radius: 0 10px 10px 0;
+    font: 0.7rem/1.8 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    flex: 1;
+    margin-right: 3rem;
+    text-align: center; }
+  .footer p {
+    margin-right: 5%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .footer p i {
+      width: 1rem;
+      height: 1rem;
+      display: block;
+      text-align: center; }
+      .footer p i img {
+        height: 100%; }
+    .footer p span {
+      margin-left: .3rem;
+      font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+      color: #b2a9a2; }
 
 /*# sourceMappingURL=hotelInfo.css.map */

@@ -1,0 +1,236 @@
+@import "base","variable";
+html{font-size:18px;}
+@media(min-device-width:320px){
+	html{
+	  font-size:18px;
+	}
+}
+@media(min-device-width:360px){
+	html{
+	  font-size:20px;
+	}
+}
+@media(min-device-width:375px){
+	html{
+	  font-size:21px;
+	}
+}
+@media(min-device-width:384px){
+	html{
+	  font-size:21px;
+	}
+}
+@media(min-device-width:400px){
+	html{
+	  font-size:22px;
+	}
+}
+@media(min-device-width:414px){
+	html{
+	  font-size:23px;
+	}
+}
+@media(min-device-width:480px){
+	html{
+	  font-size:26px;
+	}
+}
+@media(min-device-width:520px){
+	html{
+	  font-size:27px;
+	}
+}
+@media(min-device-width:533px){
+	html{
+	  font-size:28px;
+	}
+}
+@media(min-device-width:560px){
+	html{
+	  font-size:29px;
+	}
+}
+@media(min-device-width:568px){
+	html{
+	  font-size:29px;
+	}
+}
+@media(min-device-width:600px){
+	html{
+	  font-size:30px;
+	}
+}
+@media(min-device-width:640px){
+	html{
+	  font-size:24px;
+	}
+}
+.wrapper{
+	position:relative;
+	width:100%;
+	max-width:640px;
+	height:auto;
+	min-height: 100%;
+	margin:0 auto;
+	overflow:hidden;
+	background:#fff;
+}
+.publish-comment{
+	background-color:#fff;
+	height:auto;
+	overflow:hidden;
+	h2{
+		padding:0 5%;
+		width: 100%;
+	    height:2rem;
+	    font: .7em/2rem "Microsoft YaHei";
+	    color: #454545;
+	    border-bottom: 1px solid #eee;
+	}
+	.publish-comment-text{
+		padding:2% 5%;
+		position:relative;
+		height:auto;
+	    overflow:hidden;
+	    background:#fdfafa;
+		img{
+			float:left;
+			width:40%;
+		}
+		.text-r{
+			position:relative;
+			margin-left: 42%;
+			p{
+				font: .6rem/1.8 "Microsoft YaHei";
+                color: #999;
+                span{
+                	color: #de5a4c;
+                }
+			}
+			.time{
+				color: #de5a4c;
+			}
+			&:after {
+			    content:"";
+			    position: absolute;
+			    top: 50%;
+			    right:0;
+			    margin-top: -5px;
+			    width: 10px;
+			    height: 10px;
+			    border: 2px solid;
+			    border-bottom: 0;
+			    border-right: 0;
+			    color: #ccc;
+			    @include transform(rotateZ(135deg));
+			}
+		}
+	}
+	.grade{
+		h3{
+			font: .36rem/1rem "Microsoft YaHei";
+	        color: #454545;
+	        span{
+	        	color:#999;
+	        }
+		}
+		.grade-list{
+            .grade-img{
+            	width: 80%;
+                margin: 0 auto;
+            	height:30px;
+                background: url(/public/images/user/publish6.png) no-repeat;	            
+	            div{
+	            	width:20%;
+	            	height:100%;
+	            	float:left;
+	            }
+            }
+            .g1{
+            	background: url(/public/images/user/publish6.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g2{
+            	background: url(/public/images/user/publish5.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g3{
+            	background: url(/public/images/user/publish4.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g4{
+            	background: url(/public/images/user/publish3.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g5{
+            	background: url(/public/images/user/publish2.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g6{
+            	background: url(/public/images/user/publish1.png) no-repeat;
+            	background-size: 100%;
+            }
+            ul{
+            	width:90%;
+            	margin:0 auto;
+            	li{
+            		float:left;
+            		width:20%;
+            		text-align:center;
+            		font: .36rem/1rem "Microsoft YaHei";
+            	}
+            }
+	    }
+	}
+}
+.words{
+	background-color:#fff;
+	padding:5%;
+	margin-top:2%;
+	height:6rem;
+	textarea{
+		border:0;
+		background:none;
+		outline: none;
+		width:100%;
+		height:100%;
+		font: .7rem/1.2 "Microsoft YaHei";
+	}
+	p{
+		font: .6rem/1.2 "Microsoft YaHei";
+		color:#ccc;
+		text-align:right;
+	}
+}
+.publish-comment-img{
+  background-color:#fff;
+  padding:5%;
+  margin-top:.3rem;
+  height:auto;
+  overflow: hidden;
+  li{
+  	background:url(/public/images/user/up_img.jpg) no-repeat;
+  	background-size:100% 100%;
+  }
+  p{
+  	font:.6rem/1.2rem "Microsoft YaHei";
+  	color:#4c4c4c;
+  	text-align: right;
+  	a{
+  		text-decoration: none;
+  		border:1px solid #ccc;
+  		border-radius:3px;
+  		padding:.2rem;
+  		color:#4c4c4c;
+  		margin-left: .2rem;
+  	}
+  }
+}
+.publish-comment-btn{
+	border:0;
+	background-color:#de5a4c;
+	color:#fff;
+	text-align:center;
+	font:.7rem/2.4rem "Microsoft YaHei";
+	width:100%;
+}

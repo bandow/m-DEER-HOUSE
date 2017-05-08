@@ -76,11 +76,50 @@ html{font-size:18px;}
 	background-color:#fff;
 }
 .slide{
+	position:relative;
 	.swiper-slide{
 		font-size:0;
 		img{
 			width:100%;
 			height:auto;
+		}
+	}
+	.search{
+		position:absolute;
+		top:5%;
+		left:10%;
+		z-index:2;
+		width:80%;
+		padding:1.5% 0;
+		background:#fff;
+		border-radius:30px;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		input{
+			background:none;
+			border:none;
+			outline:none;
+			width:35%;
+			height:100%;
+			color:#898a8e;
+			font:.7rem/1.5 $publicFont;
+			&::-webkit-input-placeholder{
+				color:#898a8e;
+				font:.7rem/1.5 $publicFont;
+			}
+		}
+		i{
+			display:-webkit-flex;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			margin-right:.3rem;
+			width:.8rem;
+			img{
+				width:100%;
+			}
 		}
 	}
 }

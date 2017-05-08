@@ -116,11 +116,46 @@ html {
   overflow: hidden;
   background-color: #fff; }
 
-.slide .swiper-slide {
-  font-size: 0; }
-  .slide .swiper-slide img {
-    width: 100%;
-    height: auto; }
+.slide {
+  position: relative; }
+  .slide .swiper-slide {
+    font-size: 0; }
+    .slide .swiper-slide img {
+      width: 100%;
+      height: auto; }
+  .slide .search {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 2;
+    width: 80%;
+    padding: 1.5% 0;
+    background: #fff;
+    border-radius: 30px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .slide .search input {
+      background: none;
+      border: none;
+      outline: none;
+      width: 35%;
+      height: 100%;
+      color: #898a8e;
+      font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+      .slide .search input::-webkit-input-placeholder {
+        color: #898a8e;
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+    .slide .search i {
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: .3rem;
+      width: .8rem; }
+      .slide .search i img {
+        width: 100%; }
 
 .brand, .foot {
   margin-top: .3rem;

@@ -114,10 +114,9 @@ html {
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background: #fff; }
+  background: #f5f5f5; }
 
 .publish-comment {
-  background-color: #fff;
   height: auto;
   overflow: hidden; }
   .publish-comment h2 {
@@ -126,7 +125,8 @@ html {
     height: 2rem;
     font: .7em/2rem "Microsoft YaHei";
     color: #454545;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #eee;
+    background-color: #fff; }
   .publish-comment .publish-comment-text {
     padding: 2% 5%;
     position: relative;
@@ -207,7 +207,6 @@ html {
 .words {
   background-color: #fff;
   padding: 5%;
-  margin-top: 2%;
   height: 6rem; }
   .words textarea {
     border: 0;
@@ -224,7 +223,6 @@ html {
 .publish-comment-img {
   background-color: #fff;
   padding: 5%;
-  margin-top: .3rem;
   height: auto;
   overflow: hidden; }
   .publish-comment-img li {
@@ -241,6 +239,71 @@ html {
       padding: .2rem;
       color: #4c4c4c;
       margin-left: .2rem; }
+
+.select {
+  padding: 5%;
+  margin-bottom: .5rem;
+  background-color: #fff;
+  border-top: 1px solid #eee; }
+  .select ul {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .select ul li {
+      font: .7rem/1.2 "Microsoft YaHei";
+      flex: 1;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b5b5b5; }
+      .select ul li img {
+        width: 1rem;
+        height: 1rem;
+        margin-right: .3rem; }
+    .select ul .on {
+      color: #de5a4c; }
+
+.grade {
+  padding: 5% 0;
+  background: #fff;
+  width: 100%; }
+  .grade .t {
+    padding: .5rem 5%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .grade .t h3 {
+      flex: 1;
+      color: #000;
+      font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+    .grade .t p {
+      color: #b5b5b5;
+      font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+  .grade .item {
+    padding: .5rem 5% 0 5%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .grade .item p {
+      flex: 1;
+      color: #b5b5b5;
+      font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+    .grade .item .oc-star-n, .grade .item .oc-star-n1, .grade .item .oc-star-n2, .grade .item .oc-star-n3 {
+      width: 60%;
+      margin: 0 auto;
+      height: 1.4em; }
+      .grade .item .oc-star-n ul, .grade .item .oc-star-n1 ul, .grade .item .oc-star-n2 ul, .grade .item .oc-star-n3 ul {
+        display: -webkit-flex;
+        display: flex;
+        align-items: center; }
+        .grade .item .oc-star-n ul li, .grade .item .oc-star-n1 ul li, .grade .item .oc-star-n2 ul li, .grade .item .oc-star-n3 ul li {
+          flex: 1;
+          height: 1.6rem;
+          text-indent: -999px;
+          overflow: hidden;
+          padding: 0; }
 
 .publish-comment-btn {
   border: 0;

@@ -1,0 +1,479 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-10-18
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none;
+  /*去掉列表点*/ }
+
+table {
+  border-collapse: collapse;
+  /*去掉表格的双行线*/
+  border-spacing: 0; }
+
+a {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+html {
+  font-size: 18px; }
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px; } }
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20px; } }
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22px; } }
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23px; } }
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26px; } }
+@media (min-device-width: 520px) {
+  html {
+    font-size: 27px; } }
+@media (min-device-width: 533px) {
+  html {
+    font-size: 28px; } }
+@media (min-device-width: 560px) {
+  html {
+    font-size: 29px; } }
+@media (min-device-width: 568px) {
+  html {
+    font-size: 29px; } }
+@media (min-device-width: 600px) {
+  html {
+    font-size: 30px; } }
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px; } }
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f5f5f5; }
+
+.header {
+  padding: 3% 5%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: .3rem; }
+  .header a {
+    width: 1.2rem;
+    height: 1.2rem; }
+    .header a:first-child {
+      position: relative; }
+      .header a:first-child:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        margin-top: -6px;
+        width: 12px;
+        height: 12px;
+        border: 2px solid;
+        border-bottom: 0;
+        border-right: 0;
+        color: #4d4d4d;
+        -moz-transform: rotateZ(-45deg);
+        -o-transform: rotateZ(-45deg);
+        -ms-transform: rotateZ(-45deg);
+        -webkit-transform: rotateZ(-45deg);
+        transform: rotateZ(-45deg); }
+    .header a:last-child img {
+      width: 100%; }
+  .header h1 {
+    flex: 1;
+    font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #4d4d4d;
+    text-align: center; }
+
+.orders-text {
+  background: #fff;
+  padding: 2%;
+  margin: 2% 0;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; }
+  .orders-text > img {
+    width: 40%;
+    margin-right: .5rem; }
+  .orders-text .text-r h2 {
+    font: .8rem/2 "Microsoft YaHei";
+    color: #de5a4c; }
+  .orders-text .text-r p:last-child {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .orders-text .text-r p:last-child i {
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: .5rem;
+      font-size: 0; }
+      .orders-text .text-r p:last-child i img {
+        height: 100%; }
+    .orders-text .text-r p:last-child span {
+      font: .6rem/2 "Microsoft YaHei";
+      color: #999; }
+  .orders-text .text-r .address {
+    font: .6rem/1.2 "Microsoft YaHei";
+    color: #999; }
+
+.orders-time {
+  background: #fff;
+  padding: 4% 2%;
+  margin: 4% 0;
+  height: auto;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; }
+  .orders-time > div {
+    flex: 1;
+    text-align: center; }
+    .orders-time > div i {
+      margin: 0 auto;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      width: 1rem; }
+      .orders-time > div i img {
+        width: 100%; }
+    .orders-time > div p {
+      font: .75rem/2 "Microsoft YaHei";
+      color: #7e7e7e; }
+      .orders-time > div p span {
+        color: #de5a4c; }
+
+.orders-name {
+  margin: 6% 0 2%; }
+  .orders-name .name {
+    background: #fff;
+    height: auto;
+    overflow: hidden; }
+    .orders-name .name .names {
+      position: relative;
+      padding: 4% 5%;
+      margin: 2% 0;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: .5rem;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center; }
+      .orders-name .name .names i {
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        width: 1rem;
+        height: 1rem; }
+        .orders-name .name .names i img {
+          width: 100%; }
+      .orders-name .name .names .names-right {
+        margin-left: 2%; }
+        .orders-name .name .names .names-right h5 {
+          font: .75rem/1.5 "Microsoft YaHei";
+          color: #000; }
+        .orders-name .name .names .names-right p {
+          font: .6rem/1.5 "Microsoft YaHei";
+          color: #a0a0a0; }
+      .orders-name .name .names:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        margin-top: -5px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid;
+        border-bottom: 0;
+        border-right: 0;
+        color: #ccc;
+        -moz-transform: rotateZ(135deg);
+        -o-transform: rotateZ(135deg);
+        -ms-transform: rotateZ(135deg);
+        -webkit-transform: rotateZ(135deg);
+        transform: rotateZ(135deg); }
+    .orders-name .name .check-in {
+      margin-top: .5rem;
+      padding-bottom: .5rem;
+      text-decoration: none;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .orders-name .name .check-in i {
+        width: 1rem;
+        height: 1rem;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        margin-right: .5rem; }
+        .orders-name .name .check-in i img {
+          width: 100%; }
+      .orders-name .name .check-in span {
+        font: .8rem/1.5 "Microsoft YaHei";
+        color: #de5a4c; }
+  .orders-name .orders-name-bottom {
+    font: .36rem/2 "Microsoft YaHei";
+    color: #393939;
+    padding: 0 2%; }
+    .orders-name .orders-name-bottom i {
+      color: #008077;
+      margin-right: .2rem; }
+    .orders-name .orders-name-bottom a {
+      color: #008077; }
+
+.orders-submit-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.28rem;
+  background-color: #fff; }
+  .orders-submit-bottom span {
+    display: block;
+    width: 60%;
+    height: 1rem;
+    color: #008077;
+    font: .36rem/1.28rem "Microsoft YaHei";
+    float: left;
+    padding-left: 2%; }
+  .orders-submit-bottom a {
+    display: block;
+    width: 40%;
+    height: 1.28rem;
+    color: #fff;
+    font: .36rem/1.28rem "Microsoft YaHei";
+    background-color: #008077;
+    float: right;
+    text-align: center;
+    text-decoration: none; }
+
+.order-check-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff;
+  overflow: auto;
+  display: none; }
+
+.check-in-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+  height: 6.8vh;
+  padding: 0 2%; }
+  .check-in-header .left {
+    float: left;
+    width: 10%;
+    text-decoration: none;
+    display: block; }
+    .check-in-header .left i {
+      line-height: 1.2rem;
+      display: block;
+      color: #4e4e4e;
+      font-size: .7rem; }
+  .check-in-header h1 {
+    float: left;
+    width: 80%;
+    font: .4rem/6.8vh "Microsoft YaHei";
+    color: #4e4e4e;
+    margin: 0;
+    text-align: center; }
+
+.head {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding-bottom: .2rem; }
+  .head a {
+    background-color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font: .36rem/1.2 "Microsoft YaHei";
+    display: block;
+    padding: .35rem 0;
+    color: #008077; }
+    .head a i {
+      margin-right: .2rem;
+      display: inline-block; }
+
+.text-list {
+  width: 100%;
+  margin-bottom: 1rem; }
+  .text-list .list-info {
+    padding: 2%;
+    width: 100%;
+    display: table;
+    border-bottom: 1px solid #f4f4f4; }
+    .text-list .list-info .l {
+      vertical-align: middle;
+      display: inline-block;
+      width: 10%; }
+    .text-list .list-info .icon-select {
+      color: #999;
+      display: inline-block; }
+    .text-list .list-info .icon-iconfontzhichi {
+      color: #008077;
+      display: none; }
+    .text-list .list-info .info {
+      vertical-align: middle;
+      display: inline-block;
+      width: 80%; }
+      .text-list .list-info .info p {
+        font: .36rem/1.5 "Microsoft YaHei";
+        color: #696969; }
+        .text-list .list-info .info p:first-child {
+          color: #000; }
+    .text-list .list-info .r {
+      vertical-align: middle;
+      display: inline-block;
+      width: 10%;
+      text-align: right;
+      color: #ccc; }
+  .text-list .list-info-active .icon-select {
+    color: #999;
+    display: none; }
+  .text-list .list-info-active .icon-iconfontzhichi {
+    color: #008077;
+    display: inline-block; }
+
+.btn {
+  font: .36rem/1.2rem "Microsoft YaHei";
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #008077;
+  color: #fff;
+  width: 100%; }
+
+.add-order-check-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: #f4f4f4;
+  overflow: auto;
+  display: none; }
+
+.add-check-in-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+  height: 6.8vh;
+  padding: 0 2%;
+  margin-bottom: .2rem; }
+  .add-check-in-header .left {
+    float: left;
+    width: 10%;
+    text-decoration: none;
+    display: block; }
+    .add-check-in-header .left i {
+      line-height: 1.2rem;
+      display: block;
+      color: #4e4e4e;
+      font-size: .7rem; }
+  .add-check-in-header h1 {
+    float: left;
+    width: 80%;
+    font: .4rem/6.8vh "Microsoft YaHei";
+    color: #4e4e4e;
+    margin: 0;
+    text-align: center; }
+
+.add-yo-list {
+  padding: 2%;
+  background-color: #fff; }
+  .add-yo-list .item {
+    overflow: hidden;
+    background-color: #fff;
+    color: #212121;
+    font: .36rem/1rem "Microsoft YaHei";
+    position: relative;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #f4f4f4; }
+    .add-yo-list .item .mark {
+      width: 20%;
+      display: inline-block; }
+    .add-yo-list .item .yo-input {
+      width: 75%;
+      display: inline-block;
+      background: none;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none; }
+
+/*# sourceMappingURL=orderSubmit.css.map */

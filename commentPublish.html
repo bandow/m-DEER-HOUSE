@@ -25,8 +25,8 @@
       margin:0;
       height:3.6rem;
       overflow: hidden;
-      background:url(/public/images/user/bg_logo_list.png) no-repeat;
-      background-size: 100% 100%;
+      /*background:url(/public/images/user/bg_logo_list.png) no-repeat;*/
+      /*background-size: 100% 100%;*/
     }
     .img-list li{
        position:relative;
@@ -85,11 +85,60 @@
 		</div>
 		<div class="select">
 			<ul>
-				<li>好评</li>
-				<li>中评</li>
-				<li>差评</li>
+				<li><img src="images/publish/happy_icon.png" alt="">好评</li>
+				<li><img src="images/publish/smiley_icon.png" alt="">中评</li>
+				<li><img src="images/publish/sad_icon.png" alt="">差评</li>
 			</ul>
 		</div> 
+    <div class="grade">
+      <div class="t"><h3>整体评分</h3><p>满意请给5星哦</p></div>
+      <div class="item">
+        <p>描述相符</p>
+        <div class="oc-star-n" style="background: url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;"> 
+              <ul style="background:url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;">  
+                <li val="1"></li>  
+                <li val="2"></li>  
+                <li val="3"></li>  
+                <li val="4"></li>  
+                <li val="5"></li>  
+              </ul> 
+          </div>
+      </div>
+      <div class="item"><p>管家服务</p>
+         <div class="oc-star-n1" style="background: url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;"> 
+              <ul style="background:url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;">  
+                <li val="1"></li>  
+                <li val="2"></li>  
+                <li val="3"></li>  
+                <li val="4"></li>  
+                <li val="5"></li>  
+              </ul> 
+          </div>
+      </div>
+      <div class="item"><p>交通位置</p>
+          <div class="oc-star-n2" style="background: url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;"> 
+              <ul style="background:url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;">  
+                <li val="1"></li>  
+                <li val="2"></li>  
+                <li val="3"></li>  
+                <li val="4"></li>  
+                <li val="5"></li>  
+              </ul> 
+          </div>
+      </div>
+      <div class="item"><p>性价比</p>
+
+          <div class="oc-star-n3" style="background: url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;"> 
+              <ul style="background:url('images/publish/star.png') no-repeat;background-size:100% auto;background-position: 0 -1.6rem;">  
+                <li val="1"></li>  
+                <li val="2"></li>  
+                <li val="3"></li>  
+                <li val="4"></li>  
+                <li val="5"></li>  
+              </ul> 
+          </div>
+      </div>
+    </div>
 	  </div>
 	  <button class="publish-comment-btn">发布评论</button>
 	</div>
@@ -101,6 +150,51 @@
 	function goback(){
 		window.history.go(-1);
 	}
+  //评论星星
+  var arrComment=[];
+  arrComment[0]={
+    num:'-8.25rem 0'
+  };
+  arrComment[1]={
+    num:'-6.2rem 0'
+  };
+  arrComment[2]={
+    num:'-4.1rem 0'
+  };
+  arrComment[3]={
+    num:'-2.05rem 0'
+  };
+  arrComment[4]={
+    num:'0 0'
+  };
+  $(document).ready(function(){
+
+      $(".select ul li").on("click",function(){
+          $(this).addClass("on").siblings().removeClass("on");
+      });
+
+
+    $(".oc-star-n ul li").each(function(index){
+       $(this).on("click",function(){
+          $(this).parent().css("background-position",arrComment[index].num)
+       })
+    });
+    $(".oc-star-n1 ul li").each(function(index){
+       $(this).on("click",function(){
+          $(this).parent().css("background-position",arrComment[index].num)
+       })
+    });
+    $(".oc-star-n2 ul li").each(function(index){
+       $(this).on("click",function(){
+          $(this).parent().css("background-position",arrComment[index].num)
+       })
+    });
+    $(".oc-star-n3 ul li").each(function(index){
+       $(this).on("click",function(){
+          $(this).parent().css("background-position",arrComment[index].num)
+       })
+    });
+  });
 </script>
 <script>
   var filechooser = document.getElementById("choose");

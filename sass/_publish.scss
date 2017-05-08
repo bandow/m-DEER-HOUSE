@@ -73,10 +73,10 @@ html{font-size:18px;}
 	min-height: 100%;
 	margin:0 auto;
 	overflow:hidden;
-	background:#fff;
+	background:#f5f5f5;
 }
 .publish-comment{
-	background-color:#fff;
+	// background-color:#fff;
 	height:auto;
 	overflow:hidden;
 	h2{
@@ -86,6 +86,7 @@ html{font-size:18px;}
 	    font: .7em/2rem "Microsoft YaHei";
 	    color: #454545;
 	    border-bottom: 1px solid #eee;
+	    background-color:#fff;
 	}
 	.publish-comment-text{
 		padding:2% 5%;
@@ -186,7 +187,6 @@ html{font-size:18px;}
 .words{
 	background-color:#fff;
 	padding:5%;
-	margin-top:2%;
 	height:6rem;
 	textarea{
 		border:0;
@@ -205,7 +205,6 @@ html{font-size:18px;}
 .publish-comment-img{
   background-color:#fff;
   padding:5%;
-  margin-top:.3rem;
   height:auto;
   overflow: hidden;
   li{
@@ -225,6 +224,92 @@ html{font-size:18px;}
   		margin-left: .2rem;
   	}
   }
+}
+.select{
+	padding:5%;
+	margin-bottom:.5rem;
+	 background-color:#fff;
+	border-top:1px solid #eee;
+	ul{
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		li{
+			font: .7rem/1.2 "Microsoft YaHei";
+			flex:1;
+			display:-webkit-flex;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			color:#b5b5b5;
+			img{
+				width:1rem;
+				height:1rem;
+				margin-right:.3rem;
+			}
+		}
+		.on{
+			color:#de5a4c;
+		}
+	}	
+}
+.grade{
+	padding:5% 0;
+	background:#fff;
+	width:100%;
+	.t{
+		padding:.5rem 5%;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;	
+		h3{
+			flex:1;
+			color:#000;
+			font:.7rem/1.5 $publicFont;
+		}
+		p{
+			color:#b5b5b5;
+			font:.7rem/1.5 $publicFont;
+		}
+	}
+	.item{
+		padding:.5rem 5% 0 5%;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		p{
+			flex:1;
+			color:#b5b5b5;
+			font:.7rem/1.5 $publicFont;
+		}
+		.oc-star-n{
+			width:60%;
+			margin: 0 auto;
+    		height: 1.4em;
+			ul{
+				display:-webkit-flex;
+				display:flex;
+				align-items:center;
+				li{
+				    flex: 1;
+				    height: 1.6rem;
+				    text-indent: -999px;
+				    overflow: hidden;
+				    padding: 0;
+				}
+			}
+		}
+		.oc-star-n1{
+			@extend .oc-star-n;
+		}
+		.oc-star-n2{
+			@extend .oc-star-n;
+		}
+		.oc-star-n3{
+			@extend .oc-star-n;
+		}
+	}
 }
 .publish-comment-btn{
 	border:0;

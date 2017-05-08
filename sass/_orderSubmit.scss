@@ -279,6 +279,43 @@ html{font-size:18px;}
 	 	}
 	 }
 }
+
+.orderText{
+	p{
+		position:relative;
+		padding:1% 10% 1% 5%;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		background-color:#fff;
+		border-bottom:1px solid #eee;
+		span{
+			font:.75rem/2 "Microsoft YaHei";
+			&:first-child{
+				flex:1;
+				color:#262626;
+			}
+			&:last-child{
+				color:#de5a4c;
+			}
+		}
+		&:after{
+	        content:"";
+	        position: absolute;
+	        top:50%;
+	        right:5%;
+	        margin-top:-5px;
+	        width:10px;
+	        height:10px;
+	        border:1px solid;
+	        border-bottom:0;
+	        border-right:0;
+	        color:#ccc;
+	        @include transform(rotateZ(135deg));
+	    }
+	}
+}
+
 .orders-submit-bottom{
 	position:fixed;
 	left:0;
@@ -290,8 +327,8 @@ html{font-size:18px;}
 		display:block;
         width: 60%;
         height:1rem;
-        color:#008077;
-        font:.36rem/1.28rem "Microsoft YaHei";
+        color:#de5a4c;
+        font:.75rem/2.4 "Microsoft YaHei";
         float:left;
         padding-left:2%;
 	}
@@ -300,8 +337,8 @@ html{font-size:18px;}
         width: 40%;
         height:1.28rem;
         color:#fff;
-        font:.36rem/1.28rem "Microsoft YaHei";
-        background-color:#008077;
+        font:.75rem/2.4 "Microsoft YaHei";
+        background-color:#de5a4c;
         float:right;
         text-align: center;
         text-decoration: none;

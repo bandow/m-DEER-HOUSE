@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>订单支付</title>
+<link rel="stylesheet" href="styles/orderPay.css">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<a onclick="mask();" href="javascript:;"></a>
+		<h1>订单支付</h1>
+	</header>
+	<section class="submitSuccess">
+	   <div class="success">
+        <div class="img"><img src="images/order/big_check_icon.png" alt=""></div>
+        <div class="text">
+           <p>提交成功，请尽快完成支付！</p>
+          <p>房屋为您保留45分钟，请及时付款。</p> 
+        </div>
+     </div>
+     <p>待付金额：<span>¥300.00</span></p>
+  </section>
+  <section class="payMode">
+    <h4>选择支付方式</h4>
+    <ul>
+      <li>
+        <div class="img"><img src="images/order/pay1.png" alt=""></div>
+        <div class="text">
+          <h3>支付宝</h3>
+          <p>支付宝支付抽红包，每天888个</p>
+        </div>
+        <i></i>
+      </li>
+      <li>
+        <div class="img"><img src="images/order/pay2.png" alt=""></div>
+        <div class="text">
+          <h3>微信支付</h3>
+          <p>亿万用户的选择，更快更安全</p>
+        </div>
+        <i></i>
+      </li>
+      <li>
+        <div class="img"><img src="images/order/pay3.png" alt=""></div>
+        <div class="text">
+          <h3>银联支付</h3>
+          <p>储蓄卡快速支付，支付多家银行</p>
+        </div>
+        <i></i>
+      </li>
+    </ul>
+  </section>
+  <section class="goPay"><a href="">去支付</a></section>
+</div>
+<div class="mask"></div>
+<div class="maskPay">
+  <div class="img"><img src="images/order/logo.png" alt=""></div>
+  <p>好房源一眨眼就没了，确定要放弃付款吗？</p>
+  <div class="btn">
+    <a href="javascript:goback();">去意已决</a>
+    <a href="javascript:closeMask();">伦家再想想</a>
+  </div>
+</div>
+
+<!-- script begin -->
+<script src="scripts/jquery-3.2.1.min.js" ></script>
+<script>
+  $(function(){
+    $(".payMode ul li i").on("click",function(){
+      $(this).parent().addClass("active").siblings().removeClass("active");
+    });
+  });   
+	//返回上一页
+  function mask(){
+     $(".mask").show();
+     $(".maskPay").show();
+  }
+  function closeMask(){
+     $(".mask").hide();
+     $(".maskPay").hide();
+  }
+	function goback(){
+		window.history.go(-1);
+	}
+</script>
+<!-- script end -->
+</body>
+</html>

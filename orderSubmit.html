@@ -14,7 +14,12 @@
 <title>鹿驻订单填写页面</title>
 <link rel="stylesheet" href="styles/orderSubmit.css">
 <link rel="stylesheet" href="styles/daterangepicker.css">
+<link rel="stylesheet" href="styles/swiper-3.4.2.min.css">
 <style>
+
+	.swiper-pagination{text-align:center;}
+	.swiper-pagination-bullet{background:#fff;opacity:1;border:1px solid #ccc;}
+	.swiper-pagination-bullet-active{background:#e25946;border:1px solid #e25946;}
     
   .date-picker-wrapper {
       position: absolute;
@@ -154,7 +159,7 @@
                 <p>身份证号：440324198607097516</p>
   	    	</div>
   	    </div>
-        <a href="javascript:;" class="check-in">
+        <a href="addNumber.html" class="check-in">
 	        <i class="iconfont icon-shapecopy"><img src="images/order/add_icon.png" alt=""></i>
 	        <span>添加入住人</span>
         </a>
@@ -162,6 +167,29 @@
   </section>
   <section class="steward">
     <div class="t"><h4>可选服务</h4><span>管家</span></div>
+    <div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<div class="img"><img src="images/hotelInfo/head.jpg" alt=""><p>鹿小二</p></div>
+	        	<div class="text">
+	        		<p>贴心服务贴 ∣ 行车指引 ∣ 旅游指南 ∣ 28条评论</p>
+	        		<p>负责区域：广州海珠区</p>
+	        		<p>好评指数：<i><img src="images/index/star_icon.png" alt=""></i></p>
+	        	</div>
+	        	<div class="select"></div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="img"><img src="images/hotelInfo/head.jpg" alt=""><p>鹿小二</p></div>
+	        	<div class="text">
+	        		<p>贴心服务贴 ∣ 行车指引 ∣ 旅游指南 ∣ 28条评论</p>
+	        		<p>负责区域：广州海珠区</p>
+	        		<p>好评指数：<i><img src="images/index/star_icon.png" alt=""></i></p>
+	        	</div>
+	        	<div class="select"></div>
+	        </div>
+	    </div>
+	    <div class="swiper-pagination"></div>
+	</div>
   </section>
   <section class="orderText">
     <p><span>订单总额</span><span>¥498.00</span></p>
@@ -176,98 +204,15 @@
 </div>
 <div class="orders-submit-bottom">
 	<span>订单总额：¥1865.00</span>
-	<a href="orders-info.html">提交订单</a>
+	<a href="orderPay.html">提交订单</a>
 </div>
 
-<div class="order-check-in">
-	<header class="check-in-header">
-		  <a href="javascript:;" class="left">
-	    	<i class="iconfont icon-fanhui"></i>
-	    </a>
-	    <h1>选择入住人</h1>
-	</header>
-	<div class="head">
-		<a href="javascript:;" class="head-click"><i class="iconfont icon-shapecopy"></i>添加入住人</a>
-	</div>
-	<div class="text-list">
-		<div class="list-info">
-			<i class="l iconfont icon-select"></i>
-			<i class="l iconfont icon-iconfontzhichi"></i>
-            <div class="info">
-            	<p>叶伟</p>
-            	<p><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>男</p>
-            	<p><span>手机号码：</span>18685858888</p>
-            	<p><span>身份证号：</span>440324198607097516</p>	
-            </div>
-			<i class="r iconfont icon-dayuhao"></i>
-		</div>
-		<div class="list-info">
-			<i class="l iconfont icon-select"></i>
-			<i class="l iconfont icon-iconfontzhichi"></i>
-            <div class="info">
-            	<p>叶伟</p>
-            	<p><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>男</p>
-            	<p><span>手机号码：</span>18685858888</p>
-            	<p><span>身份证号：</span>440324198607097516</p>	
-            </div>
-			<i class="r iconfont icon-dayuhao"></i>
-		</div>
-	</div>
-	<input class="btn" type="button" value="确定" />
-</div>
-
-<div class="add-order-check-in">
-	<header class="add-check-in-header">
-		  <a href="javascript:;" class="left">
-	    	<i class="iconfont icon-fanhui"></i>
-	    </a>
-	    <h1>添加入住人</h1>
-	</header>
-	<div class="add-yo-list">
-	    <label class="item item-input">
-	        <span class="mark">真实姓名:</span>
-	        <input type="text" class="yo-input flex" placeholder="请填写证件上的真实姓名" />
-	    </label>
-	    <label class="item item-input">
-	        <span class="mark">手机号码:</span>
-	        <input type="text" class="yo-input flex" placeholder="请输入手机号码" />
-	    </label>
-	    <label class="item item-input">
-	        <span class="mark">身份证号:</span>
-	        <input type="text" class="yo-input flex" placeholder="请输入身份证号" />
-	    </label>
-	</div>
-    
-     <div class="upload-img">
-	    <div class="l">
-	      <div class="control-group js_uploadBox">
-	          <p>身份证正面</p>
-	          <div class="js_showBox"><img class="js_logoBox" src="../public/images/user/code-l.png" ></div>
-	          <div class="btn-upload">
-	            <a href="javascript:void(0);"><i class="icon-upload"></i><span class="js_uploadText">上传</span>图片</a>
-	            <input class="js_upFile" type="file" name="cover">
-	          </div>  
-	      </div>
-	    </div>
-	    <div class="r">
-	      <div class="control-group js_uploadBox1">
-	          <p>身份证反面</p>
-	          <div class="js_showBox1"><img class="js_logoBox" src="../public/images/user/code-r.png" ></div>
-	          <div class="btn-upload">
-	            <a href="javascript:void(0);"><i class="icon-upload"></i><span class="js_uploadText1">上传</span>图片</a>
-	            <input class="js_upFile1" type="file" name="cover">
-	          </div>  
-	      </div>
-	    </div>
-	  </div>
-
-	<input class="check-in-btn" type="buttom" value="保存" />
-</div>
 <!-- script begin -->
 <script src="scripts/jquery-1.12.2.min.js" ></script>
 <script src="scripts/moment.min.js" ></script>
 <script src="scripts/jquery.daterangepicker.js" ></script>
-<script src="scripts/jquery.uploadView.js"></script>
+<!-- <script src="scripts/jquery.uploadView.js"></script> -->
+<script src="scripts/swiper-3.4.2.min.js"></script>
 <script>
   $(function(){
 
@@ -275,9 +220,6 @@
         $(this).parent().hide();         
     });
 
-    $(".check-in").on("click",function(){
-        $(".order-check-in").show();
-    });
     $(".check-in-header .left").on("click",function(){
         $(".order-check-in").hide();
     });
@@ -295,35 +237,45 @@
     var imgW=$(".js_showBox img").width(),
         imgH=$(".js_showBox img").height();
 
-    $(".js_upFile").uploadView({
-      uploadBox: '.js_uploadBox',//设置上传框容器
-      showBox : '.js_showBox',//设置显示预览图片的容器
-      width : imgW, //预览图片的宽度，单位px
-      height : imgH, //预览图片的高度，单位px
-      allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
-      maxSize :2, //允许上传图片的最大尺寸，单位M
-      success:function(e){
-        $(".js_uploadText").text('更改');
-        alert('图片上传成功');
-      }
-    });
+    // $(".js_upFile").uploadView({
+    //   uploadBox: '.js_uploadBox',//设置上传框容器
+    //   showBox : '.js_showBox',//设置显示预览图片的容器
+    //   width : imgW, //预览图片的宽度，单位px
+    //   height : imgH, //预览图片的高度，单位px
+    //   allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+    //   maxSize :2, //允许上传图片的最大尺寸，单位M
+    //   success:function(e){
+    //     $(".js_uploadText").text('更改');
+    //     alert('图片上传成功');
+    //   }
+    // });
 
-    var imgW1=$(".js_showBox1 img").width(),
-        imgH1=$(".js_showBox1 img").height();
+    // var imgW1=$(".js_showBox1 img").width(),
+    //     imgH1=$(".js_showBox1 img").height();
 
-    $(".js_upFile1").uploadView({
-      uploadBox: '.js_uploadBox1',//设置上传框容器
-      showBox : '.js_showBox1',//设置显示预览图片的容器
-      width : imgW1, //预览图片的宽度，单位px
-      height : imgH1, //预览图片的高度，单位px
-      allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
-      maxSize :2, //允许上传图片的最大尺寸，单位M
-      success:function(e){
-        $(".js_uploadText1").text('更改');
-        alert('图片上传成功');
-      }
-    });
-  
+    // $(".js_upFile1").uploadView({
+    //   uploadBox: '.js_uploadBox1',//设置上传框容器
+    //   showBox : '.js_showBox1',//设置显示预览图片的容器
+    //   width : imgW1, //预览图片的宽度，单位px
+    //   height : imgH1, //预览图片的高度，单位px
+    //   allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+    //   maxSize :2, //允许上传图片的最大尺寸，单位M
+    //   success:function(e){
+    //     $(".js_uploadText1").text('更改');
+    //     alert('图片上传成功');
+    //   }
+    // });
+
+    var mySwiper = new Swiper('.swiper-container',{
+		pagination : '.swiper-pagination',
+		// loop : true,
+	    // autoplay: 5000,
+	});
+
+	$(".select").on("click",function(){
+		$(this).parent().addClass("selectActive").siblings().removeClass("selectActive");
+	});
+	  
   });   
 </script>
 <script>

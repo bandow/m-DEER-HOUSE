@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-10-18
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none;
+  /*去掉列表点*/ }
+
+table {
+  border-collapse: collapse;
+  /*去掉表格的双行线*/
+  border-spacing: 0; }
+
+a {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+html {
+  font-size: 18px; }
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px; } }
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20px; } }
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22px; } }
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23px; } }
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26px; } }
+@media (min-device-width: 520px) {
+  html {
+    font-size: 27px; } }
+@media (min-device-width: 533px) {
+  html {
+    font-size: 28px; } }
+@media (min-device-width: 560px) {
+  html {
+    font-size: 29px; } }
+@media (min-device-width: 568px) {
+  html {
+    font-size: 29px; } }
+@media (min-device-width: 600px) {
+  html {
+    font-size: 30px; } }
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px; } }
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f5f5f5;
+  padding-bottom: 2.4rem; }
+
+.header {
+  padding: 3% 5%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: .1rem; }
+  .header a {
+    width: 1.2rem;
+    height: 1.2rem; }
+    .header a:first-child {
+      position: relative; }
+      .header a:first-child:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        margin-top: -6px;
+        width: 12px;
+        height: 12px;
+        border: 2px solid;
+        border-bottom: 0;
+        border-right: 0;
+        color: #4d4d4d;
+        -moz-transform: rotateZ(-45deg);
+        -o-transform: rotateZ(-45deg);
+        -ms-transform: rotateZ(-45deg);
+        -webkit-transform: rotateZ(-45deg);
+        transform: rotateZ(-45deg); }
+    .header a:last-child img {
+      width: 100%; }
+  .header h1 {
+    flex: 1;
+    font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #4d4d4d;
+    text-align: center; }
+
+.invoice ul {
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; }
+  .invoice ul li {
+    border-bottom: 1px solid #eee;
+    color: #4c4c4c;
+    flex: 1;
+    font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    text-align: center; }
+  .invoice ul .active {
+    color: #de5a4c;
+    border-bottom: 1px solid #de5a4c; }
+
+.invoiceContent {
+  margin-top: .5rem; }
+  .invoiceContent .content {
+    display: none; }
+    .invoiceContent .content .item {
+      padding: 2% 5%;
+      background: #fff;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #f5f5f5; }
+      .invoiceContent .content .item p {
+        color: #4e4e4e;
+        font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+        .invoiceContent .content .item p:first-child {
+          flex: 1; }
+      .invoiceContent .content .item input {
+        background: none;
+        border: none;
+        outline: none;
+        font: 0.65rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #4e4e4e;
+        text-align: right;
+        width: 60%; }
+        .invoiceContent .content .item input::-webkit-input-placeholder {
+          font: 0.65rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+          color: #c0c0c0; }
+      .invoiceContent .content .item a {
+        color: #4e4e4e;
+        font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        text-decoration: none; }
+    .invoiceContent .content .items {
+      position: relative;
+      margin-top: .5rem; }
+      .invoiceContent .content .items:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        margin-top: -5px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid;
+        border-bottom: 0;
+        border-right: 0;
+        color: #ccc;
+        -moz-transform: rotateZ(135deg);
+        -o-transform: rotateZ(135deg);
+        -ms-transform: rotateZ(135deg);
+        -webkit-transform: rotateZ(135deg);
+        transform: rotateZ(135deg); }
+    .invoiceContent .content > h3 {
+      margin-top: .5rem;
+      font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+      color: #4e4e4e;
+      text-align: center; }
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #de5a4c; }
+  .footer a {
+    display: block;
+    font: 0.7rem/3 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #fff;
+    text-align: center;
+    text-decoration: none; }
+
+/*# sourceMappingURL=invoice.css.map */

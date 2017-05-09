@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>订单号：12345678910</title>
+<link rel="stylesheet" href="styles/orderDetail.css">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<a onclick="goback();" href="javascript:;"></a>
+		<h1>订单号：12345678910</h1>
+	</header>
+	<section class="orderDetail">
+      <div class="order-list">
+        <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span></h2>
+        <div class="text-order">
+          <div class="img">
+            <img src="images/hotelInfo/hote_info1.jpg" alt="">
+          </div>
+          <div class="text-r">
+            <p>9月1日-9月3日 共2晚</p>
+            <p>预订人：叶伟</p>
+            <p>手机号：13512345678</p>
+            <p>金额：￥1982</p>        
+          </div>
+        </div>
+        <!-- 已入住 begin -->
+        <p><span>管&nbsp;&nbsp;家：鹿小二</span><a href="tel:123456789;">联系ta</a></p>
+        <p><span>管家手机：13512345678</span></p>
+        <!-- 已入住 end -->
+      </div>  
+  </section> 
+  <!-- 已入住 begin -->
+  
+  <section class="action">
+    <ul>
+      <li>
+        <a href="">
+          <div class="img"><img src="images/order/open_door_icon.png" alt=""></div>
+          <p>远程开门</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="img"><img src="images/order/password_icon.png" alt=""></div>
+          <p>重发密码</p>
+        </a>
+      </li>
+      <li>
+        <a href="sweepRoom.html">
+          <div class="img"><img src="images/order/sweep_icon.png" alt=""></div>
+          <p>房间打扫</p>
+        </a>
+      </li>
+      <li>
+        <a href="continueLive.html">
+          <div class="img"><img src="images/order/continue_live_icon.png" alt=""></div>
+          <p>我要续住</p>
+        </a>
+      </li>
+      <li>
+        <a href="invoice.html">
+          <div class="img"><img src="images/order/invoice_icon.png" alt=""></div>
+          <p>办理发票</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="img"><img src="images/order/exit_room_icon.png" alt=""></div>
+          <p>办理退房</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+  
+  <!-- 已入住 end -->
+  <!-- 已取消 待付款 begin -->
+  <!-- 
+  <section class="businessInfo">
+    <h3>交易信息</h3>
+    <p><span>订单总额</span><span>¥498.00</span></p>
+    <p><span>优惠券</span><span>-¥100</span></p>
+    <p><span>折扣</span><span>- ¥98</span></p>
+    <p><span>实际支付</span><span>¥300</span></p>
+  </section> 
+  -->
+  <!-- 已取消 待付款 end -->
+
+   <section class="info">
+    <h3>入住人信息</h3>
+    <div class="item">
+      <p><span>鹿大大</span><i><img src="images/order/head_icon.png" alt=""></i></p>
+      <p>身份证号：440***********1234</p>
+      <!-- 已入住 begin -->
+         <p>已入住</p>
+      <!-- 已入住 end -->
+      <!-- 已取消 begin -->
+         <!-- <p class="cancel">已取消</p> -->
+      <!-- 已取消 end -->
+      <!-- 待付款 begin -->
+          <!-- <p class="pay">待付款</p> -->
+      <!-- 待付款 end -->
+    </div>
+  </section>
+
+  <!-- 已取消 待付款 begin -->
+ <!--  
+  <footer class="footer">
+    <a href="">去支付</a>
+  </footer>
+   -->
+  <!-- 已取消 待付款 end -->
+</div>
+
+
+<!-- script begin -->
+<script> 
+	//返回上一页
+	function goback(){
+		window.history.go(-1);
+	}
+</script>
+<!-- script end -->
+</body>
+</html>

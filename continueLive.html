@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>续住支付</title>
+<link rel="stylesheet" href="styles/continueLive.css">
+<link rel="stylesheet" href="styles/daterangepicker.css">
+<style> 
+  .date-picker-wrapper {
+      position: absolute;
+      z-index: 1;
+      border: none;
+      background-color: #fff;
+      padding: 0;
+      font-size: 12px;
+      line-height: 20px;
+      color: #aaa;
+      font-family: Arial,sans-serif;
+      box-shadow: none;
+      box-sizing: initial;
+      overflow-y:auto;
+  }
+  .date-picker-wrapper .month-wrapper table .day.lalala { background-color:orange; }
+  .options { display:none; border-left:6px solid #8ae; padding:10px; font-size:12px; line-height:1.4; background-color:#eee; border-radius:4px;}
+  .date-picker-wrapper.date-range-picker19 .day.first-date-selected { background-color: red !important; }
+  .date-picker-wrapper.date-range-picker19 .day.last-date-selected { background-color: orange !important; }
+  .date-picker-wrapper .month-wrapper table{width:100% !important;border-top: 1px solid #f2f2f2;}
+  .date-picker-wrapper.no-shortcuts {
+      padding-bottom: 0;
+  }
+  .date-picker-wrapper .month-wrapper {
+      border: none;
+      border-radius: 0;
+      background-color: #fff;
+      padding: 0;
+      cursor: default;
+      position: absolute;
+      bottom:0;
+      height:100%;
+      overflow-y: auto;
+  }
+  .date-picker-wrapper .month-wrapper2 {
+       -webkit-overflow-scrolling : touch; 
+  }
+  .date-picker-wrapper .month-wrapper table th, .date-picker-wrapper .month-wrapper table td{
+    width: 14.2857143%;
+    padding:.5% 1%;
+    -webkit-box-sizing: border-box; /*Safari3.2+*/
+      box-sizing: border-box;
+  }
+  .date-picker-wrapper .drp_top-bar {
+      position: absolute;
+      padding: 0;
+      left: 0;
+      width: 100%;
+      top: 32vh;
+      height: 8vh;
+      background: #f2f2f2;
+      line-height: 8vh;
+  }
+  .date-picker-wrapper .drp_top-bar .apply-btn.disabled,.date-picker-wrapper .drp_top-bar .apply-btn{
+    border: 0;
+      background: none;
+      display: block;
+      height: 8vh;
+      top: 0;
+      right: 20px;
+      color:#333;
+  }
+  .date-picker-wrapper .month-name{    
+    color: #000;
+      font-size: 14px;
+  }
+  .date-picker-wrapper .drp_top-bar .default-top,.date-picker-wrapper .drp_top-bar.normal .normal-top{
+      text-align: center;
+      color: #333;
+      font-weight: bold;
+  }
+  .date-picker-wrapper .selected-days {
+      font-weight: bold;
+      font-size: 14px;
+      font-style: normal;
+  }
+  .date-picker-wrapper .month-wrapper table .week-name {
+      height: 50px;
+      line-height: 50px;
+  }
+  .date-picker-wrapper table .caption {
+      height: 50px;
+  }
+  .date-picker-wrapper .month-wrapper table .day.checked{
+    background-color: #de5a4c;    
+  }
+  .date-picker-wrapper .month-wrapper table .day.toMonth.valid.checked {
+      color: #fff;
+      cursor: pointer;
+  }
+  .date-picker-wrapper .month-wrapper table .day.real-today{
+    background-color:transparent;
+  }
+  .date-picker-wrapper .month-wrapper table .day{
+    line-height:1.5;
+    font-size:12px;
+  }
+  .date-picker-wrapper .footer{
+    font-size: 0;
+    padding-top:0;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<a onclick="goback();" href="javascript:;"></a>
+		<h1>续住支付</h1>
+	</header>
+	<section class="continueLive">
+      <div class="order-list">
+        <div class="text-order">
+          <div class="img">
+            <img src="images/hotelInfo/hote_info1.jpg" alt="">
+          </div>
+          <div class="text-r">
+            <h4>夜阑小蛮腰·珠江帝景倚鸿轩 · 古倚鸿轩</h4>
+            <p>广州市海珠区新港东会展四路大家庭花园北座</p>
+            <p><i><img src="images/index/star_icon.png" alt=""></i><span>78条评论</span></p>       
+          </div>
+        </div>
+      </div>  
+  </section> 
+  <section class="date" id="date">
+     <h3>选择续住日期</h3>
+       <div class="orders-time" id="date">
+        <div class="left">
+          <i><img src="images/order/date_icon.png" alt=""></i>
+          <p><span id="checkInDay" class="check-in-day">9月1日</span> 14:00入住</p>
+        </div>
+        <div class="right">
+          <i><img src="images/order/date_icon.png" alt=""></i>
+          <p><span id="checkOutDay" class="check-out-day">9月3日</span> 12:00离开</p>
+        </div>
+      </div>
+  </section>
+  <section class="businessInfo">
+    <h3>交易信息</h3>
+    <p><span>订单总额</span><span>¥498.00</span></p>
+    <p><span>优惠券</span><span>-¥100</span></p>
+    <p><span>折扣</span><span>- ¥98</span></p>
+    <p><span>实际支付</span><span>¥300</span></p>
+  </section> 
+  <section class="selectPay">
+    <h3>选择支付方式</h3>
+    <div class="pay">
+      <ul>
+        <li>
+          <div class="img"><img src="images/order/pay2.png" alt=""></div>
+          <div class="text">
+            <h3>微信支付</h3>
+            <p>亿万用户的选择，更快更安全</p>
+          </div>
+          <i></i>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer">
+    <a href="">立即支付</a>
+  </footer>
+</div>
+
+
+<!-- script begin -->
+<script src="scripts/jquery-1.12.2.min.js" ></script>
+<script src="scripts/moment.min.js" ></script>
+<script src="scripts/jquery.daterangepicker.js" ></script>
+<script> 
+  $(function(){
+    $(".pay ul li i").on("click",function(){
+      $(this).parent().addClass("active").siblings().removeClass("active");
+    });
+  });   
+	//返回上一页
+	function goback(){
+		window.history.go(-1);
+	}
+</script>
+<script>
+ Date.prototype.Format = function (fmt) { //author: meizz  
+      var o = {  
+          "M+": this.getMonth() + 1, //月份  
+          "d+": this.getDate(), //日  
+          "h+": this.getHours(), //小时  
+          "m+": this.getMinutes(), //分  
+          "s+": this.getSeconds(), //秒  
+          "q+": Math.floor((this.getMonth() + 3) / 3), //季度  
+          "S": this.getMilliseconds() //毫秒  
+      };  
+      if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));  
+      for (var k in o)  
+          if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));  
+      return fmt;  
+  }; 
+
+  var arrRoomState = [];
+  $(document).ready(function () {
+    arrRoomState['2016-10-09']={day:'2016-10-09',roomrate:260,isbook:true};
+    arrRoomState['2016-10-10']={day:'2016-10-10',roomrate:260,isbook:true};
+    arrRoomState['2016-10-11']={day:'2016-10-11',roomrate:260,isbook:true};
+    arrRoomState['2016-10-12']={day:'2016-10-12',roomrate:260,isbook:true};
+    arrRoomState['2016-10-13']={day:'2016-10-13',roomrate:260,isbook:true};
+    arrRoomState['2016-10-14']={day:'2016-10-14',roomrate:260,isbook:false};
+    arrRoomState['2016-10-15']={day:'2016-10-15',roomrate:260,isbook:true};
+    arrRoomState['2016-10-16']={day:'2016-10-16',roomrate:260,isbook:true};
+    arrRoomState['2016-10-17']={day:'2016-10-17',roomrate:260,isbook:true};
+    arrRoomState['2016-10-18']={day:'2016-10-18',roomrate:260,isbook:true};
+    arrRoomState['2016-10-19']={day:'2016-10-19',roomrate:260,isbook:true};
+    arrRoomState['2016-10-20']={day:'2016-10-20',roomrate:260,isbook:true};
+    arrRoomState['2016-10-21']={day:'2016-10-21',roomrate:260,isbook:false};
+    arrRoomState['2016-10-22']={day:'2016-10-22',roomrate:260,isbook:true};
+    arrRoomState['2016-10-23']={day:'2016-10-23',roomrate:260,isbook:true};
+    arrRoomState['2016-10-24']={day:'2016-10-24',roomrate:260,isbook:true};
+    arrRoomState['2016-10-25']={day:'2016-10-25',roomrate:260,isbook:true};
+    arrRoomState['2016-10-26']={day:'2016-10-26',roomrate:260,isbook:true};
+    arrRoomState['2016-10-27']={day:'2016-10-27',roomrate:260,isbook:true};
+    arrRoomState['2016-10-28']={day:'2016-10-28',roomrate:250,isbook:false};
+    arrRoomState['2016-10-29']={day:'2016-10-29',roomrate:240,isbook:false};
+
+    var myDate = new Date();
+    var m=myDate.getMonth()+1;
+    var day=myDate.getDate();
+    var hDay=myDate.getDate()+1;
+    
+    //初始化当天时间
+    $(".check-in-day").html(m+"-"+day);
+    $(".check-out-day").html(m+"-"+hDay);
+
+    //初始化1晚
+    var num=$("#checkInDay").html()-$("#checkOutDay").html();
+    $("#num").html(num);
+    $("#num").html("1");
+    
+
+    $('#date').dateRangePicker({
+      startDate: new Date(),  //默认今天开始
+      getValue: function(){   //选择开始和结束的日期      
+        if ($('#checkInDay').html() && $('#checkOutDay').html() )
+          return $('#checkInDay').html() + ' to ' + $('#checkOutDay').html();
+        else
+          return '';
+      },
+      setValue: function(s,s1,s2){  //回调页面上
+        $('#checkInDay').html(s1);
+        $('#checkOutDay').html(s2);
+      },
+      showDateFilter: function(time, date){   //显示价格          
+        var newTime = new Date(time).Format("yyyy-MM-dd");            
+        var data = arrRoomState[newTime];
+        if (data) {
+          var html='<div style="padding:0;">';
+          html+='<span style="font-size:14px;">'+date+'</span>';
+          html+='<div style="opacity:1;">￥'+data.roomrate+'</div>';
+          html+='</div>';
+          return html;
+        }else{
+          var html='<div style="padding:0;">';
+          html+='<span style="font-size:14px;">'+date+'</span>';
+          html+='<div style="opacity:1;">已租</div>';
+          html+='</div>';
+          return html;
+        }      
+      },
+      beforeShowDay: function(t){//禁止被选的房价  
+        var newTime = t.Format("yyyy-MM-dd");
+        var data = arrRoomState[newTime];
+        var valid  = false;
+        if (data != null && data != undefined) {
+           valid = data.isbook;  
+        }
+        var _class = '';
+        var _tooltip = valid ? '' : '不能选择已定的房价';
+        return [valid,_class,_tooltip];
+      },
+      showShortcuts:false,   //去掉快捷html
+      inline:false,
+      singleMonth:false,  //true显示1个月，false为2个月
+      batchMode:true,
+      stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
+      // extraClass:'dengcb',  //添加class
+      showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
+      selectForward:false,   //true选择开始的时间前面就不能选，默认false
+      selectBackward:false,  //true只能选择1天     
+    })
+  });  
+
+  
+  /*阻止ios拖拽到底部还能继续拖拽*/
+  var ScrollFix = function(elem) {
+      // Variables to track inputs
+      var startY, startTopScroll;
+      
+      elem = elem || document.querySelector(elem);
+      
+      // If there is no element, then do nothing    
+      if(!elem)
+          return;
+
+      // Handle the start of interactions
+      elem.addEventListener('touchstart', function(event){
+          startY = event.touches[0].pageY;
+          startTopScroll = elem.scrollTop;
+          
+          if(startTopScroll <= 0)
+              elem.scrollTop = 1;
+
+          if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+              elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+      }, false);
+  };
+
+  /*判断设备调用ScrollFix*/
+
+  var sUserAgent=navigator.userAgent.toLowerCase();
+  if(sUserAgent.match(/iphone os/i) == "iphone os"){
+      $('.month-wrapper').addClass('month-wrapper2');
+      ScrollFix($('.month-wrapper2')[0]); 
+  }
+
+  /*阻止用户双击使屏幕上滑*/
+  var agent = navigator.userAgent.toLowerCase();        //检测是否是ios
+  var iLastTouch = null;                                //缓存上一次tap的时间
+  if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0)
+  {
+      document.body.addEventListener('touchend', function(event)
+      {
+          var iNow = new Date()
+              .getTime();
+          iLastTouch = iLastTouch || iNow + 1 /** 第一次时将iLastTouch设为当前时间+1 */ ;
+          var delta = iNow - iLastTouch;
+          if (delta < 500 && delta > 0)
+          {
+              event.preventDefault();
+              return false;
+          }
+          iLastTouch = iNow;
+      }, false);
+  }
+</script>
+<!-- script end -->
+</body>
+</html>

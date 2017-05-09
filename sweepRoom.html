@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>房间打扫</title>
+<link rel="stylesheet" href="styles/sweepRoom.css">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<a onclick="goback();" href="javascript:;"></a>
+		<h1>房间打扫</h1>
+	</header>
+  <section class="selectTime">
+    <h3>请选择房间打扫时间</h3>
+    <ul>
+      <li><p>12:00-14:00</p><i></i></li>
+      <li><p>14:00-16:00</p><i></i></li>
+      <li><p>16:00-18:00</p><i></i></li>
+    </ul>
+  </section>
+  <section class="remark">
+    <textarea placeholder="请输入备注"></textarea>
+  </section> 
+  <section class="businessInfo">
+    <h3>交易信息</h3>
+    <p><span>打扫费用</span><span>¥100.00</span></p>
+  </section> 
+  <section class="selectPay">
+    <h3>选择支付方式</h3>
+    <div class="pay">
+      <ul>
+        <li>
+          <div class="img"><img src="images/order/pay2.png" alt=""></div>
+          <div class="text">
+            <h3>微信支付</h3>
+            <p>亿万用户的选择，更快更安全</p>
+          </div>
+          <i></i>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer">
+    <a href="">确定</a>
+  </footer>
+</div>
+
+
+<!-- script begin -->
+<script src="scripts/jquery-3.2.1.min.js" ></script>
+<script> 
+  $(function(){
+    $(".pay ul li i").on("click",function(){
+      $(this).parent().addClass("active").siblings().removeClass("active");
+    });
+    $(".selectTime ul li i").on("click",function(){
+      $(this).parent().addClass("active").siblings().removeClass("active");
+    });
+  });   
+	//返回上一页
+	function goback(){
+		window.history.go(-1);
+	}
+</script>
+<!-- script end -->
+</body>
+</html>

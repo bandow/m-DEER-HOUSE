@@ -108,6 +108,7 @@ html {
     font-size: 24px; } }
 .wrapper {
   position: relative;
+  padding-bottom: 3rem;
   width: 100%;
   max-width: 640px;
   height: auto;
@@ -187,7 +188,7 @@ html {
 
 .hotCity-container {
   position: relative;
-  width: 40%; }
+  width: 100%; }
   .hotCity-container .swiper-slide img {
     width: 100%; }
   .hotCity-container .text {
@@ -209,7 +210,7 @@ html {
 
 .hotHouse-container, .recommendHouse-container {
   position: relative;
-  width: 90%; }
+  width: 100%; }
   .hotHouse-container .swiper-slide a, .recommendHouse-container .swiper-slide a {
     position: relative;
     font-size: 0; }
@@ -254,6 +255,12 @@ html {
       width: 100%; }
 
 .footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background: #fff;
   padding-top: 2%;
   margin-top: .5%;
   display: -webkit-flex;

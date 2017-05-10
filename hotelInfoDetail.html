@@ -18,14 +18,33 @@
 </head>
 <body>
 <div class="wrapperInfo">
+	<div class="top-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        <a href="" >
+	        	<div class="img">
+	        			<img src="images/index/house2.jpg" alt="">
+	        			<div class="collect"><img src="images/hotelList/collect_icon.png" alt=""></div>	
+		        		<div class="money">
+		        			<p>¥198<span>/晚</span></p>
+		        		</div>
+	        	</div>
+	       </a>	
+	        </div>
+	         <div class="swiper-slide">
+	        <a href="" >
+	        	<div class="img">
+	        			<img src="images/index/house2.jpg" alt="">
+	        			<div class="collect"><img src="images/hotelList/collect_icon.png" alt=""></div>	
+		        		<div class="money">
+		        			<p>¥198<span>/晚</span></p>
+		        		</div>
+	        	</div>
+	        </a>	
+	        </div>
+	    </div>
+	</div>
 	<header class="infoHeader">
-		<div class="img">
-    		<img src="images/hotelInfo/hote_info1.jpg" alt="">
-    		<div class="collect"><img src="images/hotelList/collect_icon.png" alt=""></div>
-    		<div class="money">
-    			<p>¥198<span>/晚</span></p>
-    		</div>
-    	</div>
     	<div class="text">
     	    <p><em>优惠</em><span>验真</span><i>∣</i><span>实拍</span><i>∣</i><span>23条评论</span></p>
 			<h3>夜阑小蛮腰·珠江帝景倚鸿轩·古色生香五居室</h3>
@@ -57,7 +76,7 @@
 			</li>
 		</ul>
 		<p>我们的房间允许聚会/携带宠物/抽烟，我们家的广州塔旁的豪华五居室位于珠江帝景，三面环水北旁珠江，东邻黄浦涌。我们的房间允许聚会/携带宠物/抽烟我们家的广州塔旁的豪华五居室位于珠江帝景，三面环水，北旁珠江，东东东邻黄浦涌。我们的房间允许聚会/携带宠物/抽烟。我们家的广州塔旁的华五居室位于珠江帝景，三面环水，北三面环水三面环水三面环水三面环水三面环水三面环水</p>
-		<a class="content-a" href="javascript:;">阅读更多</a>
+		<a class="content-a" href="javascript:readMore();">阅读更多</a>
 	</section>
 	<section class="comment">
 		<p><i><img src="images/hotelInfo/stars_5.png" alt=""></i><span>5分∣23评价</span></p>
@@ -238,9 +257,15 @@
 <!-- <script src="scripts/jquery-1.12.2.min.js" ></script> -->
 <script>
 	//点击content阅读更多
-	$(".content-a").on("click",function(){
-		$(this).prev().css("-webkit-line-clamp","10");
-	});
+	function readMore(){
+		$(".content-a").prev().css("-webkit-line-clamp","10");
+		$(".content-a").attr("href","javascript:read()").text("收缩更多");;
+	}
+	function read(){
+		$(".content-a").prev().css("-webkit-line-clamp","3");
+		$(".content-a").attr("href","javascript:readMore()").text("阅读更多");
+	}
+
 	$(".comment-a").on("click",function(){
 		$(".wrapperComment").show();
 		$(".wrapperInfo").css("height",$(window).height());
@@ -263,6 +288,11 @@
 	});
 	
 	//幻灯片
+	var mySwiper = new Swiper('.top-container',{
+		loop : true,
+	    autoplay: 5000,
+	});
+
 	var mySwiper= new Swiper('.takeNotes-container',{
 		watchSlidesProgress : true,
 		watchSlidesVisibility : true,

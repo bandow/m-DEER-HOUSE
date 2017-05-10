@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>用户评论</title>
+<link rel="stylesheet" href="styles/userComment.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="userComment">
+		<header class="header">
+			<a onclick="goback();" href="javascript:;"></a>
+			<h1>用户评论</h1>
+		</header>
+		<div class="comment">
+			<ul>
+				<li>待评论</li>
+				<li>已评论</li>
+			</ul>
+			<div class="allComment">
+			    <div class="wait commentItem">0</div>
+				<div class="already commentItem">1</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<a href="index.html">
+			<div class="img"><img src="images/index/index.png" alt=""></div>
+			<p>首页</p>
+		</a>
+		<a href="">
+			<div class="img"><img src="images/index/steward.png" alt=""></div>
+			<p>金牌管家</p>
+		</a>
+		<a href="userComment.html">
+			<div class="img"><img src="images/index/comment.png" alt=""></div>
+			<p>用户评论</p>
+		</a>
+		<a href="">
+			<div class="img"><img src="images/index/user.png" alt=""></div>
+			<p>会员中心</p>
+		</a>
+	</footer>
+</div>
+<!-- script begin -->
+<script>
+	//返回上一页
+	function goback(){
+		window.history.go(-1);
+	}
+</script>
+<!-- script end -->
+</body>
+</html>

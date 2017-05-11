@@ -51,7 +51,7 @@
       cursor: default;
       position: absolute;
       bottom:0;
-      height:100%;
+      height:92vh;
       overflow-y: auto;
   }
   .date-picker-wrapper .month-wrapper2 {
@@ -68,7 +68,7 @@
       padding: 0;
       left: 0;
       width: 100%;
-      top: 32vh;
+      top:0;
       height: 8vh;
       background: #f2f2f2;
       line-height: 8vh;
@@ -90,6 +90,7 @@
       text-align: center;
       color: #333;
       font-weight: bold;
+      background:#fff;
   }
   .date-picker-wrapper .selected-days {
       font-weight: bold;
@@ -273,7 +274,7 @@
 	});
 
 	$(".select").on("click",function(){
-		$(this).parent().addClass("selectActive").siblings().removeClass("selectActive");
+		$(this).parent().toggleClass("selectActive");
 	});
 	  
   });   

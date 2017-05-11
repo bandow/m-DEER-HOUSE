@@ -114,20 +114,22 @@ html {
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background: url("../images/login/bg.jpg") no-repeat;
-  background-size: 100% auto; }
+  background: #f5f5f5;
+  padding-bottom: 3rem; }
 
-.userComment {
-  padding: 5% 0; }
-  .userComment .header {
-    padding: 0 5%;
-    height: auto; }
-    .userComment .header > a {
-      position: relative;
-      display: block;
-      width: 1rem;
-      height: 1rem; }
-      .userComment .header > a:after {
+.header {
+  padding: 3% 5%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: .1rem; }
+  .header a {
+    width: 1.2rem;
+    height: 1.2rem; }
+    .header a:first-child {
+      position: relative; }
+      .header a:first-child:after {
         content: "";
         position: absolute;
         top: 50%;
@@ -138,14 +140,179 @@ html {
         border: 2px solid;
         border-bottom: 0;
         border-right: 0;
-        color: #fff;
+        color: #4d4d4d;
         -moz-transform: rotateZ(-45deg);
         -o-transform: rotateZ(-45deg);
         -ms-transform: rotateZ(-45deg);
         -webkit-transform: rotateZ(-45deg);
         transform: rotateZ(-45deg); }
+    .header a:last-child img {
+      width: 100%; }
+  .header h1 {
+    flex: 1;
+    font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #4d4d4d;
+    text-align: center; }
+
+.userComment ul {
+  padding: 0 20%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  background: #fff; }
+  .userComment ul li {
+    margin: 0 10% 1% 10%;
+    padding: 3% 0;
+    flex: 1;
+    text-align: center;
+    font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #7b7b7b;
+    border-bottom: 2px solid #fff; }
+  .userComment ul .active {
+    border-bottom: 2px solid;
+    color: #de5a4c; }
+.userComment > .text {
+  background: #de5a4c;
+  padding: 4% 0; }
+  .userComment > .text p {
+    font: 0.55rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    color: #fff;
+    text-align: center; }
+    .userComment > .text p span {
+      font-size: .8rem; }
+.userComment .allComment .commentItem {
+  display: none; }
+  .userComment .allComment .commentItem .item {
+    margin: .2rem 0;
+    background: #fff; }
+    .userComment .allComment .commentItem .item .t {
+      border-bottom: 1px solid #eee;
+      padding: 2% 5%; }
+      .userComment .allComment .commentItem .item .t p {
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        color: #828282; }
+        .userComment .allComment .commentItem .item .t p span:nth-child(2) {
+          margin-left: .5rem;
+          flex: 1; }
+    .userComment .allComment .commentItem .item .c {
+      padding: 2%;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center; }
+      .userComment .allComment .commentItem .item .c .img {
+        width: 50%;
+        margin-right: .5rem;
+        font-size: 0; }
+        .userComment .allComment .commentItem .item .c .img img {
+          width: 100%; }
+      .userComment .allComment .commentItem .item .c > .text h3 {
+        font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #de5a4c;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .userComment .allComment .commentItem .item .c > .text p {
+        font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #9b9b9b; }
+        .userComment .allComment .commentItem .item .c > .text p:nth-child(2) {
+          font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+          color: #6e6e6e;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .userComment .allComment .commentItem .item .c > .text p:nth-child(5) {
+          display: flex;
+          display: -webkit-flex;
+          align-items: center; }
+          .userComment .allComment .commentItem .item .c > .text p:nth-child(5) i {
+            display: block;
+            height: .5rem;
+            font-size: 0; }
+            .userComment .allComment .commentItem .item .c > .text p:nth-child(5) i img {
+              height: 100%; }
+          .userComment .allComment .commentItem .item .c > .text p:nth-child(5) span {
+            font: 0.5rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+    .userComment .allComment .commentItem .item .answer {
+      padding: 2%;
+      border-bottom: 1px solid #eee; }
+      .userComment .allComment .commentItem .item .answer h3 {
+        font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #de5a4c; }
+      .userComment .allComment .commentItem .item .answer p {
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #484747;
+        text-indent: 2em; }
+        .userComment .allComment .commentItem .item .answer p:last-child {
+          display: flex;
+          display: -webkit-flex;
+          align-items: center;
+          text-indent: 0;
+          color: #acacac;
+          font-size: .5rem; }
+          .userComment .allComment .commentItem .item .answer p:last-child i {
+            display: block;
+            height: .5rem;
+            font-size: 0;
+            margin-right: .3rem; }
+            .userComment .allComment .commentItem .item .answer p:last-child i img {
+              height: 100%; }
+          .userComment .allComment .commentItem .item .answer p:last-child span {
+            margin-right: .3rem; }
+    .userComment .allComment .commentItem .item .b {
+      border-bottom: 1px solid #eee; }
+      .userComment .allComment .commentItem .item .b .bT {
+        padding: 2% 5%;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center; }
+        .userComment .allComment .commentItem .item .b .bT .img {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 100%;
+          overflow: hidden;
+          margin-right: .5rem;
+          font-size: 0; }
+          .userComment .allComment .commentItem .item .b .bT .img img {
+            width: 100%; }
+        .userComment .allComment .commentItem .item .b .bT > .text h4 {
+          font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+          color: #636363;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .userComment .allComment .commentItem .item .b .bT > .text p {
+          font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+          color: #b5b5b5; }
+      .userComment .allComment .commentItem .item .b .tag {
+        padding: 1% 5%; }
+        .userComment .allComment .commentItem .item .b .tag p {
+          font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+          color: #de5a4c; }
+    .userComment .allComment .commentItem .item .foot {
+      padding: 2%;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      justify-content: flex-end; }
+      .userComment .allComment .commentItem .item .foot a {
+        padding: 0 2%;
+        border: 1px solid;
+        color: #de5a4c;
+        border-radius: 30px;
+        font: 0.65rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        text-decoration: none;
+        margin-left: 1rem; }
 
 .footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background: #fff;
   padding-top: 2%;
   margin-top: .5%;
   display: -webkit-flex;
@@ -158,7 +325,7 @@ html {
     text-decoration: none;
     color: #6a6969;
     font: 0.6rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
-    .footer a:first-child {
+    .footer a:nth-child(3) {
       color: #de5a4c; }
     .footer a .img {
       margin: 0 auto;

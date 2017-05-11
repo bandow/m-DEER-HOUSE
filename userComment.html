@@ -12,29 +12,207 @@
 <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
 <meta name="msapplication-tap-highlight" content="no">
 <title>用户评论</title>
+<link rel="stylesheet" href="styles/dropload.css">
 <link rel="stylesheet" href="styles/userComment.css">
 </head>
 <body>
 <div class="wrapper">
+	<header class="header">
+		<a onclick="goback();" href="javascript:;"></a>
+		<h1>用户评论</h1>
+	</header>
 	<div class="userComment">
-		<header class="header">
-			<a onclick="goback();" href="javascript:;"></a>
-			<h1>用户评论</h1>
-		</header>
-		<div class="comment">
-			<ul>
-				<li>待评论</li>
-				<li>已评论</li>
-			</ul>
-			<div class="allComment">
-			    <div class="wait commentItem">0</div>
-				<div class="already commentItem">1</div>
+		<ul class="commentList">
+			<li class="active">待评论</li>
+			<li class="">已评论</li>
+		</ul>
+		<div class="text"><p>点评即送<span>100</span>元优惠券，可在下次预定中使用。快去评价！</p></div>
+		<div class="allComment">
+		    <div style="display:block;" class="lists commentItem">
+				<div class="item">
+					<div class="t">
+						<p><span>订单号</span><span>1024154899</span><span>已入住</span></p>  
+					</div>
+					<div class="c">
+						<div class="img">
+							<img src="images/hotelInfo/hote_info1.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3>夜阑小蛮腰·珠江帝景倚...</h3>
+							<p>广州市海珠区新港东会展四路...</p>
+							<p>2017.3.28-2017.3.29  共一晚</p>
+							<p>预订人：鹿大大</p>
+							<p>
+								<i><img src="images/index/star_icon.png" alt=""></i>
+								<span>78条评论</span>
+							</p>
+						</div>
+					</div>
+					<div class="b">
+						<div class="bT">
+							<div class="img">
+								<img src="images/hotelInfo/head.jpg" alt="">
+							</div>
+							<div class="text">
+								<h4>杨小鹿</h4>
+								<p>实名认证 · 金牌管家 ∣ 好评率99%</p>
+							</div>
+						</div>
+						<div class="tag"><p>负责广州区域 ∣  旅游介绍 ∣ 乘车介绍</p></div>
+					</div>
+					<div class="foot">
+						<a href="">再次预定</a>
+						<a href="">评价领券</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="t">
+						<p><span>订单号</span><span>1024154899</span><span>已入住</span></p>  
+					</div>
+					<div class="c">
+						<div class="img">
+							<img src="images/hotelInfo/hote_info1.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3>夜阑小蛮腰·珠江帝景倚...</h3>
+							<p>广州市海珠区新港东会展四路...</p>
+							<p>2017.3.28-2017.3.29  共一晚</p>
+							<p>预订人：鹿大大</p>
+							<p>
+								<i><img src="images/index/star_icon.png" alt=""></i>
+								<span>78条评论</span>
+							</p>
+						</div>
+					</div>
+					<div class="b">
+						<div class="bT">
+							<div class="img">
+								<img src="images/hotelInfo/head.jpg" alt="">
+							</div>
+							<div class="text">
+								<h4>杨小鹿</h4>
+								<p>实名认证 · 金牌管家 ∣ 好评率99%</p>
+							</div>
+						</div>
+						<div class="tag"><p>负责广州区域 ∣  旅游介绍 ∣ 乘车介绍</p></div>
+					</div>
+					<div class="foot">
+						<a href="">再次预定</a>
+						<a href="">评价领券</a>
+					</div>
+				</div>
+		    </div>
+			<div class="lists commentItem">
+				<div class="item">
+					<div class="t">
+						<p><span>订单号</span><span>1024154899</span><span>已入住</span></p>  
+					</div>
+					<div class="c">
+						<div class="img">
+							<img src="images/hotelInfo/hote_info1.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3>夜阑小蛮腰·珠江帝景倚...</h3>
+							<p>广州市海珠区新港东会展四路...</p>
+							<p>2017.3.28-2017.3.29  共一晚</p>
+							<p>预订人：鹿大大</p>
+							<p>
+								<i><img src="images/index/star_icon.png" alt=""></i>
+								<span>78条评论</span>
+							</p>
+						</div>
+					</div>
+					<div class="answer">
+						<h3>评论内容：</h3>
+						<p>房子超级好看，配置很齐全，附近好多好玩好吃的，好开心！双击6666，下次还来！</p>
+						<p>
+							<span>2017-3-31</span>
+							<i><img src="images/index/star_icon.png" alt=""></i>
+							<span>4.8分</span>
+							<span>79条评论</span> 
+						</p>
+					</div>
+					<div class="b">
+						<div class="bT">
+							<div class="img">
+								<img src="images/hotelInfo/head.jpg" alt="">
+							</div>
+							<div class="text">
+								<h4>杨小鹿</h4>
+								<p>实名认证 · 金牌管家 ∣ 好评率99%</p>
+							</div>
+						</div>
+						<div class="tag"><p>负责广州区域 ∣  旅游介绍 ∣ 乘车介绍</p></div>
+					</div>
+					<div class="answer">
+						<h3>评论内容：</h3>
+						<p>房子超级好看，配置很齐全，附近好多好玩好吃的，好开心！双击6666，下次还来！</p>
+						<p>
+							<span>2017-3-31</span>
+							<i><img src="images/index/star_icon.png" alt=""></i>
+							<span>4.8分</span>
+							<span>79条评论</span> 
+						</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="t">
+						<p><span>订单号</span><span>1024154899</span><span>已入住</span></p>  
+					</div>
+					<div class="c">
+						<div class="img">
+							<img src="images/hotelInfo/hote_info1.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3>夜阑小蛮腰·珠江帝景倚...</h3>
+							<p>广州市海珠区新港东会展四路...</p>
+							<p>2017.3.28-2017.3.29  共一晚</p>
+							<p>预订人：鹿大大</p>
+							<p>
+								<i><img src="images/index/star_icon.png" alt=""></i>
+								<span>78条评论</span>
+							</p>
+						</div>
+					</div>
+					<div class="answer">
+						<h3>评论内容：</h3>
+						<p>房子超级好看，配置很齐全，附近好多好玩好吃的，好开心！双击6666，下次还来！</p>
+						<p>
+							<span>2017-3-31</span>
+							<i><img src="images/index/star_icon.png" alt=""></i>
+							<span>4.8分</span>
+							<span>79条评论</span> 
+						</p>
+					</div>
+					<div class="b">
+						<div class="bT">
+							<div class="img">
+								<img src="images/hotelInfo/head.jpg" alt="">
+							</div>
+							<div class="text">
+								<h4>杨小鹿</h4>
+								<p>实名认证 · 金牌管家 ∣ 好评率99%</p>
+							</div>
+						</div>
+						<div class="tag"><p>负责广州区域 ∣  旅游介绍 ∣ 乘车介绍</p></div>
+					</div>
+					<div class="answer">
+						<h3>评论内容：</h3>
+						<p>房子超级好看，配置很齐全，附近好多好玩好吃的，好开心！双击6666，下次还来！</p>
+						<p>
+							<span>2017-3-31</span>
+							<i><img src="images/index/star_icon.png" alt=""></i>
+							<span>4.8分</span>
+							<span>79条评论</span> 
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<footer class="footer">
 		<a href="index.html">
-			<div class="img"><img src="images/index/index.png" alt=""></div>
+			<div class="img"><img src="images/index/index_gray.png" alt=""></div>
 			<p>首页</p>
 		</a>
 		<a href="">
@@ -42,7 +220,7 @@
 			<p>金牌管家</p>
 		</a>
 		<a href="userComment.html">
-			<div class="img"><img src="images/index/comment.png" alt=""></div>
+			<div class="img"><img src="images/index/comment_red.png" alt=""></div>
 			<p>用户评论</p>
 		</a>
 		<a href="">
@@ -52,11 +230,140 @@
 	</footer>
 </div>
 <!-- script begin -->
+<!-- <script src="scripts/jquery-3.2.1.min.js" ></script> -->
+<script src="scripts/zepto.min.js"></script>
+<script src="scripts/dropload.min.js"></script>
 <script>
 	//返回上一页
 	function goback(){
 		window.history.go(-1);
 	}
+</script>
+<script>
+$(function(){
+    var itemIndex = 0;
+    var tab1LoadEnd = false;
+    var tab2LoadEnd = false;
+    var tab3LoadEnd = false;
+    // tab
+    $('.commentList li').on('click',function(){
+        var $this = $(this);
+        itemIndex = $this.index();
+        $this.addClass('active').siblings('li').removeClass('active');
+        $('.lists').eq(itemIndex).show().siblings('.lists').hide();
+
+        // 如果选中菜单一
+        if(itemIndex == '0'){
+            // 如果数据没有加载完
+            if(!tab1LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        // 如果选中菜单二
+        }else if(itemIndex == '1'){
+            if(!tab2LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        }
+        // 重置
+        dropload.resetload();
+    });
+
+    var counter = 0;
+    // 每页展示4个
+    var num = 4;
+    var pageStart = 0,pageEnd = 0;
+
+    // dropload
+    var dropload = $('.userComment').dropload({
+        scrollArea : window,
+        loadDownFn : function(me){
+            // 加载菜单一的数据
+            if(itemIndex == '0'){
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/more.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        counter++;
+                        pageEnd = num * counter;
+                        pageStart = pageEnd - num;
+
+                        if(pageStart <= data.lists.length){
+                            for(var i = pageStart; i < pageEnd; i++){
+                                result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+                                                +'<img src="'+data.lists[i].pic+'" alt="">'
+                                                +'<h3>'+data.lists[i].title+'</h3>'
+                                                +'<span class="date">'+data.lists[i].date+'</span>'
+                                            +'</a>';
+                                if((i + 1) >= data.lists.length){
+                                    // 数据加载完
+                                    tab1LoadEnd = true;
+                                    // 锁定
+                                    me.lock();
+                                    // 无数据
+                                    me.noData();
+                                    break;
+                                }
+                            }
+                            // 为了测试，延迟1秒加载
+                            setTimeout(function(){
+                                $('.lists').eq(0).append(result);
+                                // 每次数据加载完，必须重置
+                                me.resetload();
+                            },1000);
+                        }
+                    },
+                    error: function(xhr, type){
+                        console.log('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            // 加载菜单二的数据
+            }else if(itemIndex == '1'){
+                $.ajax({
+                    type: 'GET',
+                    url: '../public/scripts/json/update.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        for(var i = 0; i < data.lists.length; i++){
+                            result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+                                            +'<img src="'+data.lists[i].pic+'" alt="">'
+                                            +'<h3>'+data.lists[i].title+'</h3>'
+                                            +'<span class="date">'+data.lists[i].date+'</span>'
+                                        +'</a>';
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function(){
+                            $('.lists').eq(1).append(result);
+                            // 每次数据加载完，必须重置
+                            me.resetload();
+                        },1000);
+                    },
+                    error: function(xhr, type){
+                        console.log('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            }
+        }
+    });
+});
 </script>
 <!-- script end -->
 </body>

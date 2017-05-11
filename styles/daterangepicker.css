@@ -140,12 +140,14 @@
 {
 	padding:0 5px;
 	cursor:pointer;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
 }
 .date-picker-wrapper table .caption .next:hover,
 .date-picker-wrapper table .caption .prev:hover
 {
-	background-color:#ccc;
-	color:white;
+	background-color:#fff;
+	color:#ccc;
 }
 .date-picker-wrapper .gap
 {

@@ -141,18 +141,24 @@ html {
     background: #fff;
     border-radius: 100%;
     overflow: hidden;
-    border: 2px solid #fff; }
+    border: 2px solid #fff;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .header .img img {
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
   .header h1 {
-    font: 0.75rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    font: 0.9rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
     color: #fff;
     text-align: center; }
 
 .userOrder {
-  padding: 2% 5%;
+  padding: 2% 3%;
   background: #fff; }
   .userOrder h2 {
+    padding: 0 9%;
     color: #000;
     font: 0.8rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
     margin-bottom: .5rem; }
@@ -163,16 +169,18 @@ html {
     .userOrder ul li {
       flex: 1;
       text-align: center; }
-      .userOrder ul li img {
+      .userOrder ul li a {
+        text-decoration: none; }
+      .userOrder ul li a img {
         margin: 0 auto;
-        width: 50%; }
-      .userOrder ul li p {
+        width: 35%; }
+      .userOrder ul li a p {
         color: #4d4c4c;
-        font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
 
 .userList {
   margin-top: .3rem;
-  padding: 2% 5%;
+  padding: 2% 3%;
   background: #fff; }
   .userList dl {
     display: -webkit-flex;
@@ -180,14 +188,48 @@ html {
     align-items: center;
     flex-wrap: wrap; }
     .userList dl dd {
+      padding: 5% 0 5% 10%;
+      margin: 1% 0;
       width: 50%;
-      display: -webkit-flex;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .userList dl dd span {
-        color: #4d4c4c;
-        font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+      border-bottom: 1px solid #eee;
+      text-decoration: none; }
+      .userList dl dd a {
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none; }
+        .userList dl dd a .img {
+          width: 1rem;
+          height: 1rem;
+          font-size: 0;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: .5rem; }
+          .userList dl dd a .img img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 1rem; }
+        .userList dl dd a span {
+          color: #4d4c4c;
+          font: 0.7rem/2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+      .userList dl dd:nth-child(2n) {
+        position: relative; }
+        .userList dl dd:nth-child(2n):before {
+          position: absolute;
+          content: "";
+          top: 10%;
+          left: 0;
+          width: 1px;
+          height: 80%;
+          background: #ccc; }
+      .userList dl dd:last-child {
+        border-bottom: 0; }
+      .userList dl dd:nth-last-child(2) {
+        border-bottom: 0; }
 
 .footer {
   position: fixed;

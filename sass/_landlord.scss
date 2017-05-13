@@ -122,135 +122,65 @@ html{font-size:18px;}
 			}
 		}
 	}
-	
 }
-.userOrder{
-	padding:2% 3%;
-	background:#fff;
-	h2{
-		padding:0 9%;
-		color:#000;
-		font:.8rem/2 $publicFont;
-		margin-bottom:.5rem;
-	}
-	ul{
-		display:-webkit-flex;
-		display:flex;
-		align-items:center;
-		li{
-			flex:1;
-			text-align:center;
-			a{text-decoration:none;}
-			a img{
-				margin:0 auto;
-				width:35%;
-			}
-			a p{
-				color:#4d4c4c;
-				font:.7rem/1.5 $publicFont;
-			}
-		}
-	}
-}
-.userList{
+.landlord{
 	margin-top:.3rem;
-	padding:2% 3%;
 	background:#fff;
-	dl{
+	a{
+		text-decoration:none;
+		padding:3% 10% 3% 5%;
+		border-bottom:1px solid #eee;
+		position:relative;
 		display:-webkit-flex;
 		display:flex;
 		align-items:center;
-		flex-wrap: wrap;
-		dd{
-			padding:5% 0 5% 10%;
-			margin:1% 0;
-			width:50%;
-			border-bottom:1px solid #eee;
-			text-decoration:none;
-			a{
-				display:-webkit-flex;
-				display:flex;
-				align-items:center;
-				justify-content:flex-start;
-				text-decoration:none;
-				.img{
-					width:1rem;
-					height:1rem;
-					font-size:0;
-					display:-webkit-flex;
-					display:flex;
-					align-items:center;
-					justify-content:center;
-					margin-right:.5rem;
-					img{
-						width:auto;
-						height:auto;
-						max-width:100%;
-						max-height:1rem
-					}
-				}
-				span{
-					color:#4d4c4c;
-					font:.7rem/2 $publicFont;	
-				}
-			}
-			&:nth-child(2n){
-				position:relative;
-				&:before{
-					position:absolute;
-					content:"";
-					top:10%;
-					left:0;
-					width:1px;
-					height:80%;
-					background:#ccc;
-				}
-			}
-			&:last-child{
-				border-bottom:0;
-			}
-			&:nth-last-child(2){
-				border-bottom:0;
-			}
-		}
-	}
-}
-.footer{
-	position:fixed;
-	left:0;
-	right:0;
-	bottom:0;
-	z-index:3;
-	background:#fff;
-	padding-top:2%;
-	margin-top:.5%;
-	display:-webkit-flex;
-	display:flex;
-	align-items:center;
-	border-top:1px solid #eaeaea;
-	a{
-		flex:1;
-		text-align:center;
-		text-decoration:none;
-		color:#6a6969;
-		font:.6rem/2 $publicFont;
-		&:nth-child(4){
-			color:#de5a4c;
-		}
-		.img{
-			margin:0 auto;
-			width:1.2rem;
-			height:1.2rem;
+		i{
+			width:1rem;
+			height:1rem;
 			display:-webkit-flex;
 			display:flex;
 			align-items:center;
-			justify-content:center;
+			justify-content: center;
+			font-size:0;
+			margin-right:.5rem;
 			img{
-				min-width:auto;
+				width:auto;
+				height:auto;
 				max-width:100%;
-				min-height:auto;
 				max-height:100%;
 			}
 		}
+		p{
+			color:#282828;
+			flex:1;
+			font:.7rem/1.5 $publicFont;
+			display:-webkit-flex;
+			display:flex;
+			align-items:center;
+			&:last-child{
+				span{
+					&:first-child{
+						flex:1;
+					}
+					&:last-child{
+						color:#7a7a7a;
+					}
+				}
+			}
+		}
+		&:after{
+	        content:"";
+	        position: absolute;
+	        top:50%;
+	        right:5%;
+	        margin-top:-5px;
+	        width:10px;
+	        height:10px;
+	        border:2px solid;
+	        border-bottom:0;
+	        border-right:0;
+	        color:#ccc;
+	        @include transform(rotateZ(135deg));
+	    }
 	}
 }

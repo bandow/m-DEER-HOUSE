@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>我的优惠券</title>
+<link rel="stylesheet" href="styles/userCoupons.css">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<a onclick="goback();" href="javascript:;"></a>
+		<h1>我的优惠券</h1>
+	</header>
+	<div class="coupon">
+		<ul>
+			<li class="active">未使用</li>
+			<li>已过期</li>
+		</ul>
+		<div class="allCoupon">
+			<div style="display:block;" class="couponList">
+				<div class="item">
+					<div class="l">
+						<p>有效</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="l">
+						<p>有效</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="couponList overdue">
+				<div class="item">
+					<div class="l">
+						<p>已过期</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="l">
+						<p>已过期</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mask"></div>
+	<div class="couponInfo">
+		<h2><span>优惠券详情</span><a class="close" href="javascript:;"><img src="images/user/close.png" alt=""></a></h2>
+		<div class="tText">
+			<p><span>优惠券号：</span><span>LZAXRYGQ8M888</span></p>
+			<p><span>金额：</span><span>100</span></p>
+			<p><span>有效期：</span><span>截至2017-04-20</span></p>
+			<p><span>来源：</span><span>新用户注册礼包</span></p>
+		</div>
+		<div class="bText">
+			<p>使用规则</p>
+			<p>每张订单限用一张（每张订单中只能使用1张，不能与其他类型优惠券一同使用）</p>
+			<p>金额限制：订单金额需>=500.00元</p>
+			<p>有效期限制：2017-04-01至2017-04-20</p>
+		</div>
+	</div>
+</div>
+<!-- script begin -->
+<script src="scripts/jquery-3.2.1.min.js" ></script>
+<script>
+	//返回上一页
+	function goback(){
+		window.history.go(-1);
+	}
+	$(document).ready(function(){
+		$('.coupon ul li').on('click',function(){
+	        var $this = $(this);
+	        $this.addClass('active').siblings('li').removeClass('active');
+	        $('.couponList').eq($(this).index()).show().siblings().hide();
+        });
+        $(".more a").on("click",function(){
+        	$(".mask,.couponInfo").show();
+        });
+        $(".close,.mask").on("click",function(){
+        	$(".mask,.couponInfo").hide();
+        });
+	});
+</script>
+<!-- script end -->
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>个人信息</title>
+<link rel="stylesheet" href="styles/userInfo.css">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<a onclick="goback();" href="javascript:;"></a>
+		<!-- 判断个人管家房东 -->
+		<h1>个人信息</h1>
+		<!-- <h1>管家信息 </h1> -->
+		<!-- <h1>房东信息 </h1> -->
+		<a href="javascript:;">保存</a>
+	</header>
+	<div class="info">
+		<div class="head">
+			<div class="picture js_uploadBox">
+				<div class="js_showBox">
+					<img class="js_logoBox" src="images/user/head.jpg" >
+					<input class="js_upFile" type="file" name="cover"> 
+				</div>
+				<div class="img"><img src="images/user/picture_icon.png" alt=""><input class="js_upFile" type="file" name="cover"></div>
+	       </div>
+	       <div class="name">
+	       		<input type="text" readonly="readonly" value="" placeholder="萨瓦迪卡">
+	       		<div class="img"><img src="images/user/edit-icon.png" alt=""></div>
+	       </div>
+		</div>
+		<div class="infoList">
+			<p class="on"><span>姓名</span><input type="text" placeholder="请填写"></p>
+			<p class="on"><span>性别</span><input type="text" placeholder="请选择"></p>
+			<p class="on"><span>邮箱</span><input type="text" placeholder="请填写"></p>
+			<!-- 判断个人管家房东 房东无等级 -->
+			<!-- <p><span>等级</span><span>金牌管家</span></p> -->
+			<p><span>等级</span><span>微会员</span></p>
+			<p><span>手机号码</span><span>13512345678</span></p>
+			<p class="on"><span>身份证号</span><input type="text" placeholder="请填写"></p>
+			<p class="on"><span>所在城市</span><span>广州</span></p>
+		</div>
+	</div>
+
+	
+
+</div>
+<!-- script begin -->
+<script src="scripts/jquery-3.2.1.min.js" ></script>
+<script src="scripts/jquery.uploadView.js" ></script>
+<script>
+	//返回上一页
+	function goback(){
+		window.history.go(-1);
+	}
+	$(document).ready(function(){
+		$(".name .img").on("click",function(){
+			$(this).prev().removeAttr("readonly").addClass("active");
+			$(this).hide();
+		});
+	});
+</script>
+<script>
+    var imgW=$(".js_showBox img").width(),
+        imgH=$(".js_showBox img").height();
+
+    $(".js_upFile").uploadView({
+      uploadBox: '.js_uploadBox',//设置上传框容器
+      showBox : '.js_showBox',//设置显示预览图片的容器
+      width : imgW, //预览图片的宽度，单位px
+      height : imgH, //预览图片的高度，单位px
+      allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+      maxSize :2, //允许上传图片的最大尺寸，单位M
+      success:function(e){
+        alert('图片上传成功');
+      }
+    });
+</script>
+<!-- script end -->
+</body>
+</html>

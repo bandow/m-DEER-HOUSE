@@ -114,7 +114,7 @@ html {
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background: #fff; }
+  background: #f5f5f5; }
 
 .header {
   padding: 3% 5%;
@@ -124,6 +124,7 @@ html {
   border-bottom: 1px solid #eee;
   background: #fff; }
   .header a {
+    text-decoration: none;
     width: 1.2rem;
     height: 1.2rem;
     position: relative; }
@@ -150,33 +151,47 @@ html {
     color: #4d4d4d;
     text-align: center; }
 
-.modify {
-  padding: 5%; }
-  .modify .item {
-    padding: 0 5%;
-    margin: 0 0 5% 0;
-    height: 1.8rem;
-    background: #f5f5f5;
-    border-radius: 30px; }
-    .modify .item input {
-      background: none;
-      border: none;
-      outline: none;
-      width: 100%;
-      height: 100%;
-      font: 0.7rem/1.8rem -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-      color: #333; }
-      .modify .item input::-webkit-input-placeholder {
-        font: 0.7rem/1.8rem -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-        color: #999; }
-  .modify > a {
-    display: block;
-    height: 1.8rem;
-    background: #de5a4c;
-    border-radius: 30px;
-    text-align: center;
-    font: 0.7rem/1.8rem -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-    color: #fff;
-    text-decoration: none; }
+.contact {
+  margin-top: .1rem;
+  background: #fff; }
+  .contact a {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 5% 10% 5% 5%;
+    border-bottom: 1px solid #eee; }
+    .contact a .img {
+      width: 1rem; }
+      .contact a .img img {
+        width: 100%; }
+    .contact a .text {
+      margin-left: .5rem; }
+      .contact a .text h3 {
+        color: #373737;
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+      .contact a .text p {
+        color: #c1c1c1;
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+    .contact a:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      margin-top: -5px;
+      width: 10px;
+      height: 10px;
+      border: 2px solid;
+      border-bottom: 0;
+      border-right: 0;
+      color: #ccc;
+      -moz-transform: rotateZ(135deg);
+      -o-transform: rotateZ(135deg);
+      -ms-transform: rotateZ(135deg);
+      -webkit-transform: rotateZ(135deg);
+      transform: rotateZ(135deg); }
+    .contact a:last-child {
+      border-bottom: 0; }
 
-/*# sourceMappingURL=userModifyPassword.css.map */
+/*# sourceMappingURL=contact.css.map */

@@ -74,6 +74,7 @@ html{font-size:18px;}
 	margin:0 auto;
 	overflow:hidden;
 	background:#f5f5f5;
+	padding-bottom:2.4rem;
 }
 .header{
 	padding:3% 5%;
@@ -115,33 +116,10 @@ html{font-size:18px;}
 		text-align:center;
 	}
 }
-.userOrder{
-	.tab{
-		display:-webkit-flex;
-		display:flex;
-		align-items:center;
-		background:#fff;
-		a{
-			margin:0 8%;
-			flex:1;
-			text-decoration:none;
-			text-align:center;
-			font:.8rem/2.4 $publicFont;
-			color:#7a7a7a;
-		}
-		.cur{
-			color:#de5a4c;
-			border-bottom:2px solid #de5a4c;
-		}
-	}
-	.content{
-		margin-top:.3rem;
-		.lists{
-			display:none;
-		}
-	}
+.receive{
+	margin-top:.3rem;
 }
-.order-list{
+.receiveList{
 	background:#fff;
 	margin-bottom:.3rem;
 	h2{
@@ -171,7 +149,7 @@ html{font-size:18px;}
 		padding:3%;
 		display:-webkit-flex;
 		display:flex;
-		align-items:center;
+		align-items:flex-start;
 		.img{
 			width:50%;
 			img{
@@ -203,34 +181,69 @@ html{font-size:18px;}
 				}
 			}
 		}
-		&:after{
-	        content:"";
-	        position: absolute;
-	        top:50%;
-	        right:5%;
-	        margin-top:-5px;
-	        width:10px;
-	        height:10px;
-	        border:1px solid;
-	        border-bottom:0;
-	        border-right:0;
-	        color:#ccc;
-	        @include transform(rotateZ(135deg));
-	    }
 	}
 }
-.nullOrder{
-	.img{
-	    margin:50% auto 0;
-		width:3rem;
-		font-size: 0;
-		img{
-			width:100%;
+.info{
+	margin-top:1rem;
+	h3{
+		font:.7rem/2 $publicFont;
+		color:#393939;
+		text-align:center;
+	}
+	.item{
+		padding:5%;
+		background:#fff;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		p{
+			font:.55rem/1.5 $publicFont;
+			color:#696969;
+			&:nth-child(1){
+				display:-webkit-flex;
+				display:flex;
+				align-items:center;
+				span{
+					color:#000;
+				}
+				i{
+					width:.6rem;
+					display:-webkit-flex;
+					display:flex;
+					align-items:center;
+					justify-content:center;
+					margin-left:.2rem;
+					img{
+						width:100%;
+					}
+				}
+			}
+			&:nth-child(2){
+				flex:1;
+				text-align:center;
+			}
+		}
+		.cancel{
+			color:#de5a4c;
+		}
+		.pay{
+			color:#de5a4c;
 		}
 	}
-	p{
-		font:.6em/2.4 $publicFont;
-		color:#bcbcbc;
-		text-align: center;
+}
+.footer{
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	background:#e25946;
+	a{
+		display:block;
+		text-decoration:none;
+		font:.7rem/3 $publicFont;
+		color:#fff;
+		text-align:center;
 	}
 }
+
+

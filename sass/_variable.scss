@@ -22,6 +22,10 @@ $black:#000;
 @mixin translate ($x, $y) {
    @include transform(translate($x, $y));
 }
+// translate3d
+@mixin translate3d ($x, $y,$z) {
+   @include transform(translate3d($x, $y,$z));
+}
 // skew
 @mixin skew ($x, $y) {
    @include transform(skew(#{$x}deg, #{$y}deg));

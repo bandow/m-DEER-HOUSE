@@ -160,15 +160,15 @@ html{font-size:18px;}
 	position:relative;
 	margin:5% 0;
 	background-color:#fff;
-	height: 1.6rem;
+	height:2.6rem;
 	&:before{
 		content:"";
 		position: absolute;
 		width: 0;
 		height:0;
-		border-left: .3rem solid transparent;
-	    border-right: .3rem  solid transparent;
-	    border-top: .3rem  solid #fff;
+		border-left: .6rem solid transparent;
+	    border-right: .6rem  solid transparent;
+	    border-top: .6rem  solid #fff;
 	    left: 50%;
         top: 100%;
         z-index: 1;
@@ -180,44 +180,48 @@ html{font-size:18px;}
 		width: 100%;
 		background-color:#fff;
 		z-index:2;
-		max-height:7rem;
+		max-height:14rem;
         overflow: auto;
 		dt{
            border:1px solid #ccc;
            color:#4e4e4e;
-           font:.4rem/1.1rem "Microsoft YaHei";
+           font:.65rem/2.2rem "Microsoft YaHei";
            padding:0 2%;
            position:relative;
+           display: -webkit-flex;
+           display: flex;
+           align-items:center;
            &:before{
 				content: "";
 			    position: absolute;
 			    width: 0;
 			    height: 0;
-			    border-left: .2rem solid transparent;
-			    border-right: .2rem solid transparent;
-			    border-top: .2rem solid #cacaca;
+			    border-left: .4rem solid transparent;
+			    border-right: .4rem solid transparent;
+			    border-top: .4rem solid #cacaca;
 			    right: 4%;
 			    top: 50%;
 			    z-index: 1;
 		        @include transform(translate(0, -50%));
 			}
            input{
-	           	width: .5rem;
-			    height: .5rem;
-			    float: left;
-			    margin:.26rem .1rem 0 0;
+	           	width: 1rem;
+			    height: 1rem;
+           }
+           span{
+           	flex:1;
            }
 		}
 		dd{
            color:#4e4e4e;
-           font:.4rem/1.1rem "Microsoft YaHei";
+           font:.65rem/2.2rem "Microsoft YaHei";
            padding:0 2%;
            display: none;
            input{
-	           	width: .5rem;
-			    height: .5rem;
+	           	width: 1rem;
+			    height: 1rem;
 			    float: left;
-			    margin:.26rem .1rem 0 0;
+			    margin:.5rem .1rem 0 0;
            }
            a{
            	text-decoration:none;
@@ -237,9 +241,9 @@ html{font-size:18px;}
 		position: absolute;
 		width: 0;
 		height:0;
-		border-top: .2rem solid transparent;
-	    border-bottom: .2rem  solid transparent;
-	    border-right: .2rem  solid #cacaca;
+		border-top: .4rem solid transparent;
+	    border-bottom: .4rem  solid transparent;
+	    border-right: .4rem  solid #cacaca;
 	    left:.1%;
 	    top: 50%;
 	    z-index: 1;
@@ -250,9 +254,9 @@ html{font-size:18px;}
 		position: absolute;
 		width: 0;
 		height:0;
-		border-top: .2rem solid transparent;
-	    border-bottom: .2rem  solid transparent;
-	    border-left: .2rem  solid #cacaca;
+		border-top: .4rem solid transparent;
+	    border-bottom: .4rem  solid transparent;
+	    border-left: .4rem  solid #cacaca;
 	    right:.1%;
 	    top: 50%;
 	    z-index: 1;
@@ -261,13 +265,13 @@ html{font-size:18px;}
 	ul{
 		width:240vw;
 		margin-left:-60vw;
-		height: 1.2rem;
+		height: 2.4rem;
 		overflow: hidden;
         border-bottom:1px solid #ccc;
         transition:all .5s;
         -webkit-transition:all .5s;
         li{
-			font:.36rem/1.2rem "Microsoft YaHei";
+			font:.7rem/1.2rem "Microsoft YaHei";
 			float: left;
 			text-align: center;
 			width:20vw;
@@ -280,7 +284,7 @@ html{font-size:18px;}
                content:"";
                width:20vw;
                height: 2px;
-               background-color:#008077;
+               background-color:#de5a4c;
                position:absolute;
                left:0;
                bottom:0;

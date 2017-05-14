@@ -200,7 +200,7 @@ html {
     padding: 3%;
     display: -webkit-flex;
     display: flex;
-    align-items: center; }
+    align-items: flex-start; }
     .order-list .text-order .img {
       width: 50%; }
       .order-list .text-order .img img {
@@ -226,33 +226,59 @@ html {
           font: 0.7rem/1.6 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
           color: #de5a4c;
           border-radius: 5px; }
-    .order-list .text-order:after {
-      content: "";
+
+.noReceive {
+  position: relative; }
+  .noReceive:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-bottom: 0;
+    border-right: 0;
+    color: #ccc;
+    -moz-transform: rotateZ(135deg);
+    -o-transform: rotateZ(135deg);
+    -ms-transform: rotateZ(135deg);
+    -webkit-transform: rotateZ(135deg);
+    transform: rotateZ(135deg); }
+
+.receive {
+  position: relative; }
+  .receive .promptImg {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0; }
+    .receive .promptImg img {
+      width: 100%; }
+
+.accomplish {
+  position: relative; }
+  .accomplish .promptImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.31);
+    font-size: 0; }
+    .accomplish .promptImg img {
       position: absolute;
       top: 50%;
-      right: 5%;
-      margin-top: -5px;
-      width: 10px;
-      height: 10px;
-      border: 1px solid;
-      border-bottom: 0;
-      border-right: 0;
-      color: #ccc;
-      -moz-transform: rotateZ(135deg);
-      -o-transform: rotateZ(135deg);
-      -ms-transform: rotateZ(135deg);
-      -webkit-transform: rotateZ(135deg);
-      transform: rotateZ(135deg); }
+      left: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
 
-.nullOrder .img {
-  margin: 50% auto 0;
-  width: 3rem;
-  font-size: 0; }
-  .nullOrder .img img {
-    width: 100%; }
-.nullOrder p {
-  font: 0.6em/2.4 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-  color: #bcbcbc;
-  text-align: center; }
-
-/*# sourceMappingURL=userOrder.css.map */
+/*# sourceMappingURL=handlerOrders.css.map */

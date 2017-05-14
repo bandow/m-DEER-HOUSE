@@ -13,7 +13,7 @@
 <meta name="msapplication-tap-highlight" content="no">
 <title>我的订单</title>
 <link rel="stylesheet" href="styles/dropload.css">
-<link rel="stylesheet" href="styles/userOrder.css">
+<link rel="stylesheet" href="styles/handlerOrders.css">
 </head>
 <body>
 <div class="wrapper">
@@ -24,13 +24,48 @@
 	<section class="userOrder">
      <div class="tab">
         <a href="javascript:;" class="item cur">全&nbsp;&nbsp;&nbsp;&nbsp;部</a>
-        <a href="javascript:;" class="item">待付款</a>
-        <a href="javascript:;" class="item">待入住</a>
+        <a href="javascript:;" class="item">未接待</a>
+        <a href="javascript:;" class="item">已完成</a>
     </div>
     <div class="content">
       <div class="lists" style="display:block;">
-        <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="orderDetail.html">已入住</a></h2>
+        <div class="order-list noReceive">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">未接待</a></h2>
+          <div class="text-order">
+            <div class="img">
+              <img src="images/hotelInfo/hote_info1.jpg" alt="">
+            </div>
+            <div class="text-r">
+              <p>9月1日-9月3日 共2晚</p>
+              <p>预订人：叶伟</p>
+              <p>手机号：13512345678</p>
+              <p>金额：￥1982</p>   
+               <div class="btn">
+                <a href="handlerShift.html">转移客户</a>
+                <a href="handlerReceive.html">确认接待</a>
+              </div>       
+            </div>
+          </div>
+        </div> 
+        <div class="order-list receive">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已接待</a></h2>
+          <div class="text-order">
+            <div class="img">
+              <img src="images/hotelInfo/hote_info1.jpg" alt="">
+            </div>
+            <div class="text-r">
+              <p>9月1日-9月3日 共2晚</p>
+              <p>预订人：叶伟</p>
+              <p>手机号：13512345678</p>
+              <p>金额：￥1982</p>       
+            </div>
+          </div>
+          <div class="promptImg">
+            <img src="images/user/serve_icon.png" alt="">
+          </div>
+        </div>   
+        <div class="order-list accomplish">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已完成</a></h2>
           <div class="text-order">
             <div class="img">
               <img src="images/hotelInfo/hote_info1.jpg" alt="">
@@ -42,128 +77,14 @@
               <p>金额：￥1982</p>        
             </div>
           </div>
-        </div>  
-        <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待付款</a></h2>
-          <div class="text-order">
-            <div class="img">
-              <img src="images/hotelInfo/hote_info1.jpg" alt="">
-            </div>
-            <div class="text-r">
-              <p>9月1日-9月3日 共2晚</p>
-              <p>预订人：叶伟</p>
-              <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>
-              <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">去支付</a>
-              </div>        
-            </div>
-          </div>
-        </div>  
-        <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待入住</a></h2>
-          <div class="text-order">
-            <div class="img">
-              <img src="images/hotelInfo/hote_info1.jpg" alt="">
-            </div>
-            <div class="text-r">
-              <p>9月1日-9月3日 共2晚</p>
-              <p>预订人：叶伟</p>
-              <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>   
-               <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">确定入住</a>
-              </div>       
-            </div>
-          </div>
-        </div>  
-         <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已取消</a></h2>
-          <div class="text-order">
-            <div class="img">
-              <img src="images/hotelInfo/hote_info1.jpg" alt="">
-            </div>
-            <div class="text-r">
-              <p>9月1日-9月3日 共2晚</p>
-              <p>预订人：叶伟</p>
-              <p>手机号：13512345678</p>
-              <p>金额：￥1982</p> 
-               <div class="btn">
-                <a href="#">再次预订</a>
-              </div>       
-            </div>
-          </div>
-        </div> 
-        <!-- 无此类订单 begin -->
-        <!--   
-        <div class="nullOrder">
-            <div class="img"><img src="images/user/null_order_icon.png" alt=""></div>
-            <p>暂无此类订单</p>
-        </div> 
-        -->
-         <!-- 无此类订单 end -->
-      </div>
-      <div class="lists">
-         <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待付款</a></h2>
-          <div class="text-order">
-            <div class="img">
-              <img src="images/hotelInfo/hote_info1.jpg" alt="">
-            </div>
-            <div class="text-r">
-              <p>9月1日-9月3日 共2晚</p>
-              <p>预订人：叶伟</p>
-              <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>
-              <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">去支付</a>
-              </div>        
-            </div>
-          </div>
-        </div>  
-         <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待付款</a></h2>
-          <div class="text-order">
-            <div class="img">
-              <img src="images/hotelInfo/hote_info1.jpg" alt="">
-            </div>
-            <div class="text-r">
-              <p>9月1日-9月3日 共2晚</p>
-              <p>预订人：叶伟</p>
-              <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>
-              <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">去支付</a>
-              </div>        
-            </div>
-          </div>
-        </div>  
-         <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待付款</a></h2>
-          <div class="text-order">
-            <div class="img">
-              <img src="images/hotelInfo/hote_info1.jpg" alt="">
-            </div>
-            <div class="text-r">
-              <p>9月1日-9月3日 共2晚</p>
-              <p>预订人：叶伟</p>
-              <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>
-              <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">去支付</a>
-              </div>        
-            </div>
+           <div class="promptImg">
+            <img src="images/user/accomplish_icon.png" alt="">
           </div>
         </div>  
       </div>
       <div class="lists">
-        <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待入住</a></h2>
+        <div class="order-list receive">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已接待</a></h2>
           <div class="text-order">
             <div class="img">
               <img src="images/hotelInfo/hote_info1.jpg" alt="">
@@ -172,34 +93,15 @@
               <p>9月1日-9月3日 共2晚</p>
               <p>预订人：叶伟</p>
               <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>   
-               <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">确定入住</a>
-              </div>       
+              <p>金额：￥1982</p>       
             </div>
           </div>
-        </div> 
-         <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待入住</a></h2>
-          <div class="text-order">
-            <div class="img">
-              <img src="images/hotelInfo/hote_info1.jpg" alt="">
-            </div>
-            <div class="text-r">
-              <p>9月1日-9月3日 共2晚</p>
-              <p>预订人：叶伟</p>
-              <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>   
-               <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">确定入住</a>
-              </div>       
-            </div>
+          <div class="promptImg">
+            <img src="images/user/serve_icon.png" alt="">
           </div>
         </div> 
-         <div class="order-list">
-          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">待入住</a></h2>
+        <div class="order-list receive">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已接待</a></h2>
           <div class="text-order">
             <div class="img">
               <img src="images/hotelInfo/hote_info1.jpg" alt="">
@@ -208,12 +110,81 @@
               <p>9月1日-9月3日 共2晚</p>
               <p>预订人：叶伟</p>
               <p>手机号：13512345678</p>
-              <p>金额：￥1982</p>   
-               <div class="btn">
-                <a href="javascript:;">取消</a>
-                <a href="#">确定入住</a>
-              </div>       
+              <p>金额：￥1982</p>       
             </div>
+          </div>
+          <div class="promptImg">
+            <img src="images/user/serve_icon.png" alt="">
+          </div>
+        </div> 
+        <div class="order-list receive">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已接待</a></h2>
+          <div class="text-order">
+            <div class="img">
+              <img src="images/hotelInfo/hote_info1.jpg" alt="">
+            </div>
+            <div class="text-r">
+              <p>9月1日-9月3日 共2晚</p>
+              <p>预订人：叶伟</p>
+              <p>手机号：13512345678</p>
+              <p>金额：￥1982</p>       
+            </div>
+          </div>
+          <div class="promptImg">
+            <img src="images/user/serve_icon.png" alt="">
+          </div>
+        </div> 
+      </div>
+      <div class="lists">
+        <div class="order-list accomplish">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已完成</a></h2>
+          <div class="text-order">
+            <div class="img">
+              <img src="images/hotelInfo/hote_info1.jpg" alt="">
+            </div>
+            <div class="text-r">
+              <p>9月1日-9月3日 共2晚</p>
+              <p>预订人：叶伟</p>
+              <p>手机号：13512345678</p>
+              <p>金额：￥1982</p>        
+            </div>
+          </div>
+           <div class="promptImg">
+            <img src="images/user/accomplish_icon.png" alt="">
+          </div>
+        </div>
+        <div class="order-list accomplish">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已完成</a></h2>
+          <div class="text-order">
+            <div class="img">
+              <img src="images/hotelInfo/hote_info1.jpg" alt="">
+            </div>
+            <div class="text-r">
+              <p>9月1日-9月3日 共2晚</p>
+              <p>预订人：叶伟</p>
+              <p>手机号：13512345678</p>
+              <p>金额：￥1982</p>        
+            </div>
+          </div>
+           <div class="promptImg">
+            <img src="images/user/accomplish_icon.png" alt="">
+          </div>
+        </div> 
+        <div class="order-list accomplish">
+          <h2><span>夜阑小蛮腰·珠江帝小蛮腰·珠江帝景倚鸿轩·古色生香</span><a href="#">已完成</a></h2>
+          <div class="text-order">
+            <div class="img">
+              <img src="images/hotelInfo/hote_info1.jpg" alt="">
+            </div>
+            <div class="text-r">
+              <p>9月1日-9月3日 共2晚</p>
+              <p>预订人：叶伟</p>
+              <p>手机号：13512345678</p>
+              <p>金额：￥1982</p>        
+            </div>
+          </div>
+           <div class="promptImg">
+            <img src="images/user/accomplish_icon.png" alt="">
           </div>
         </div> 
       </div>

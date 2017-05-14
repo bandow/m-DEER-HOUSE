@@ -354,3 +354,18 @@ html{font-size:18px;}
 		}
 	}
 }
+.nullComment{
+	.img{
+	    margin:50% auto 0;
+		width:3rem;
+		font-size: 0;
+		img{
+			width:100%;
+		}
+	}
+	p{
+		font:.6em/3 $publicFont;
+		color:#bcbcbc;
+		text-align: center;
+	}
+}

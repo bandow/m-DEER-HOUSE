@@ -341,4 +341,15 @@ html {
         min-height: auto;
         max-height: 100%; }
 
+.nullComment .img {
+  margin: 50% auto 0;
+  width: 3rem;
+  font-size: 0; }
+  .nullComment .img img {
+    width: 100%; }
+.nullComment p {
+  font: 0.6em/3 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #bcbcbc;
+  text-align: center; }
+
 /*# sourceMappingURL=userComment.css.map */

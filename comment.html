@@ -12,6 +12,7 @@
 <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
 <meta name="msapplication-tap-highlight" content="no">
 <title>鹿驻评论页面</title>
+<link rel="stylesheet" href="styles/dropload.css">
 <link rel="stylesheet" href="styles/comment.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
 					<li><span>性价比</span><span>5分</span></li>
 				</ul>
 		    </div>
-			<div class="list">
+			<div class="list lists">
 				<div class="listTop">
 					<div class="t">
 						<div class="img"><img src="images/hotelInfo/head2.jpg" alt=""></div>
@@ -46,7 +47,7 @@
 					<p>谢谢，欢迎下次再来~</p>
 				</div>
 			</div>
-			<div class="list">
+			<div class="list lists">
 				<div class="listTop">
 					<div class="t">
 						<div class="img"><img src="images/hotelInfo/head2.jpg" alt=""></div>
@@ -62,7 +63,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="list">
+			<div class="list lists">
 				<div class="listTop">
 					<div class="t">
 						<div class="img"><img src="images/hotelInfo/head2.jpg" alt=""></div>
@@ -76,7 +77,7 @@
 					<p>谢谢，欢迎下次再来~</p>
 				</div>
 			</div>
-			<div class="list">
+			<div class="list lists">
 				<div class="listTop">
 					<div class="t">
 						<div class="img"><img src="images/hotelInfo/head2.jpg" alt=""></div>
@@ -96,11 +97,63 @@
 	</div>
 </div>
 <!-- script begin -->
+<script src="scripts/zepto.min.js"></script>
+<script src="scripts/dropload.min.js"></script>
 <script>
 	//返回上一页
 	function goback(){
 		window.history.go(-1);
 	}
+	//下拉加载
+	$(function(){
+	  var counter = 0;
+	  // 每页展示4个
+	  var num = 4;
+	  var pageStart = 0,pageEnd = 0;
+	  // dropload
+	  $('.wrapperComment').dropload({
+	      scrollArea : window,
+	      loadDownFn : function(me){
+	          $.ajax({
+	              type: 'GET',
+	              url: '/data/update.json',
+	              dataType: 'json',
+	              success: function(data){
+	                  var result = '';
+	                  counter++;
+	                  pageEnd = num * counter;
+	                  pageStart = pageEnd - num;
+
+	                  for(var i = pageStart; i < pageEnd; i++){
+	                      result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+	                                      +'<img src="'+data.lists[i].pic+'" alt="">'
+	                                      +'<h3>'+data.lists[i].title+'</h3>'
+	                                      +'<span class="date">'+data.lists[i].date+'</span>'
+	                                  +'</a>';
+	                      if((i + 1) >= data.lists.length){
+	                          // 锁定
+	                          me.lock();
+	                          // 无数据
+	                          me.noData();
+	                          break;
+	                      }
+	                  }
+	                  // 为了测试，延迟1秒加载
+	                  setTimeout(function(){
+	                      $('.lists').append(result);
+	                      // 每次数据加载完，必须重置
+	                      me.resetload();
+	                  },1000);
+	              },
+	              error: function(xhr, type){
+	                  console.log('Ajax error!');
+	                  // 即使加载出错，也得重置
+	                  me.resetload();
+	              }
+	          });
+	      }
+	  });
+	});
 </script>
 <!-- script end -->
 </body>

@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="styles/orderSubmit.css">
 <link rel="stylesheet" href="styles/daterangepicker.css">
 <link rel="stylesheet" href="styles/swiper-3.4.2.min.css">
+<link rel="stylesheet" href="styles/addNumber.css">
 <style>
 
 	.swiper-pagination{text-align:center;}
@@ -118,6 +119,18 @@
     line-height:1.5;
     font-size:12px;
   }
+
+  .wrapper-add{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:auto;
+    background:#fff;
+    z-index:2;
+  }
 </style>
 </head>
 <body>
@@ -160,7 +173,7 @@
                 <p>身份证号：440324198607097516</p>
   	    	</div>
   	    </div>
-        <a href="addNumber.html" class="check-in">
+        <a href="javascript:;" class="check-in">
 	        <i class="iconfont icon-shapecopy"><img src="images/order/add_icon.png" alt=""></i>
 	        <span>添加入住人</span>
         </a>
@@ -194,7 +207,7 @@
   </section>
   <section class="orderText">
     <p><span>订单总额</span><span>¥498.00</span></p>
-    <p><span>优惠券</span><span>-¥100</span></p>
+    <p onclick="couponMask()"><span>优惠券</span><span class="couponMoney">-¥100</span></p>
     <p><span>折扣</span><span>- ¥98</span></p>
     <p><span>实际支付</span><span>¥300</span></p>
   </section>
@@ -208,8 +221,125 @@
 	<a href="orderPay.html">提交订单</a>
 </div>
 
+<div class="wrapper-add">
+  <header class="header">
+    <a onclick="closeDiv();" href="javascript:;"></a>
+    <h1>添加入住人</h1>
+    <a href="orderSubmit.html">确定添加</a>
+  </header>
+  <div class="">
+    <div class="add-yo-list">
+        <label class="item item-input">
+            <span class="mark">真实姓名:</span>
+            <input type="text" class="yo-input flex" placeholder="请填写证件上的真实姓名" />
+        </label>
+        <label class="item item-input">
+            <span class="mark">手机号码:</span>
+            <input type="text" class="yo-input flex" placeholder="请输入手机号码" />
+        </label>
+        <label class="item item-input">
+            <span class="mark">身份证号:</span>
+            <input type="text" class="yo-input flex" placeholder="请输入身份证号" />
+        </label>
+    </div>
+    
+    <div class="upload-img">
+      <div class="l">
+        <div class="control-group js_uploadBox">
+            <p>身份证正面</p>
+            <div class="js_showBox"><img class="js_logoBox" src="images/order/code-l.png" ></div>
+            <div class="btn-upload">
+              <a href="javascript:void(0);"><i class="icon-upload"></i><span class="js_uploadText">上传</span>图片</a>
+              <input class="js_upFile" type="file" name="cover">
+            </div>  
+        </div>
+      </div>
+      <div class="r">
+        <div class="control-group js_uploadBox1">
+            <p>身份证反面</p>
+            <div class="js_showBox1"><img class="js_logoBox" src="images/order/code-r.png" ></div>
+            <div class="btn-upload">
+              <a href="javascript:void(0);"><i class="icon-upload"></i><span class="js_uploadText1">上传</span>图片</a>
+              <input class="js_upFile1" type="file" name="cover">
+            </div>  
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="werapper-coupon">
+  <header class="header">
+    <a onclick="closeDiv1();" href="javascript:;"></a>
+    <h1>我的优惠券</h1>
+  </header>
+  <div class="couponList">
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥100</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥200</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥300</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥400</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+  </div>
+</div>
+
 <!-- script begin -->
 <script src="scripts/jquery-1.12.2.min.js" ></script>
+<script src="scripts/jquery.uploadView.js"></script>
 <script src="scripts/moment.min.js" ></script>
 <script src="scripts/jquery.daterangepicker.js" ></script>
 <!-- <script src="scripts/jquery.uploadView.js"></script> -->
@@ -273,10 +403,56 @@
 	    // autoplay: 5000,
 	});
 
-	$(".select").on("click",function(){
-		$(this).parent().toggleClass("selectActive");
+  
+	$(".select").on("click",function(){   
+    if($(this).parent().hasClass("selectActive")){
+      $(this).parent().removeClass("selectActive");
+    }else{
+      $(this).parent().addClass("selectActive").siblings().removeClass("selectActive");
+    }
 	});
 	  
+  });   
+</script>
+<script>
+  $(function(){
+
+  $(".check-in").on("click",function(){
+      $(".wrapper-add").show();
+  });
+
+      var imgW=$(".js_showBox img").width(),
+        imgH=$(".js_showBox img").height();
+
+    $(".js_upFile").uploadView({
+      uploadBox: '.js_uploadBox',//设置上传框容器
+      showBox : '.js_showBox',//设置显示预览图片的容器
+      width : imgW, //预览图片的宽度，单位px
+      height : imgH, //预览图片的高度，单位px
+      allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+      maxSize :2, //允许上传图片的最大尺寸，单位M
+      success:function(e){
+        $(".js_uploadText").text('更改');
+        alert('图片上传成功');
+      }
+    });
+
+    var imgW1=$(".js_showBox1 img").width(),
+        imgH1=$(".js_showBox1 img").height();
+
+    $(".js_upFile1").uploadView({
+      uploadBox: '.js_uploadBox1',//设置上传框容器
+      showBox : '.js_showBox1',//设置显示预览图片的容器
+      width : imgW1, //预览图片的宽度，单位px
+      height : imgH1, //预览图片的高度，单位px
+      allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+      maxSize :2, //允许上传图片的最大尺寸，单位M
+      success:function(e){
+        $(".js_uploadText1").text('更改');
+        alert('图片上传成功');
+      }
+    });
+    
   });   
 </script>
 <script>
@@ -445,6 +621,24 @@
 	function goback(){
 		window.history.go(-1);
 	}
+  function closeDiv(){
+    $(".wrapper-add").hide();
+  }
+  function closeDiv1(){
+    $(".werapper-coupon").hide();
+    $(".wrapper").show();
+  }
+  function couponMask(){
+    $(".werapper-coupon").show();
+    $(".wrapper").hide();
+  }
+  $(function(){
+    $(".couponList .item").on("click",function(){
+      $(this).addClass("itemActive").siblings().removeClass("itemActive");
+      $(".couponMoney").text("-"+$(this).find("h2").text());
+      closeDiv1();
+    });
+  });
 </script>
 <!-- script end -->
 </body>

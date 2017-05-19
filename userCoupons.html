@@ -12,6 +12,7 @@
 <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
 <meta name="msapplication-tap-highlight" content="no">
 <title>我的优惠券</title>
+<link rel="stylesheet" href="styles/dropload.css">
 <link rel="stylesheet" href="styles/userCoupons.css">
 </head>
 <body>
@@ -26,7 +27,37 @@
 			<li>已过期</li>
 		</ul>
 		<div class="allCoupon">
-			<div style="display:block;" class="couponList">
+			<div style="display:block;" class="couponList lists">
+				<div class="item">
+					<div class="l">
+						<p>有效</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="l">
+						<p>有效</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
 				<div class="item">
 					<div class="l">
 						<p>有效</p>
@@ -58,7 +89,37 @@
 					</div>
 				</div>
 			</div>
-			<div class="couponList overdue">
+			<div class="couponList overdue lists">
+				<div class="item">
+					<div class="l">
+						<p>已过期</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="l">
+						<p>已过期</p>
+						<h2>¥100</h2>
+						<h3>优惠券</h3>
+					</div>
+					<div class="r">
+						<h3>新人券</h3>
+						<p>每满¥500可用</p>
+						<p>2017.04.20 23:59 到期</p>
+					</div>
+					<div class="more">
+						<a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+					</div>
+				</div>
 				<div class="item">
 					<div class="l">
 						<p>已过期</p>
@@ -110,18 +171,20 @@
 	</div>
 </div>
 <!-- script begin -->
-<script src="scripts/jquery-3.2.1.min.js" ></script>
+<!-- <script src="scripts/jquery-3.2.1.min.js" ></script> -->
+<script src="scripts/zepto.min.js"></script>
+<script src="scripts/dropload.min.js"></script>
 <script>
 	//返回上一页
 	function goback(){
 		window.history.go(-1);
 	}
 	$(document).ready(function(){
-		$('.coupon ul li').on('click',function(){
+		/**$('.coupon ul li').on('click',function(){
 	        var $this = $(this);
 	        $this.addClass('active').siblings('li').removeClass('active');
 	        $('.couponList').eq($(this).index()).show().siblings().hide();
-        });
+        });**/
         $(".more a").on("click",function(){
         	$(".mask,.couponInfo").show();
         });
@@ -129,6 +192,132 @@
         	$(".mask,.couponInfo").hide();
         });
 	});
+</script>
+<script>
+$(function(){
+    var itemIndex = 0;
+    var tab1LoadEnd = false;
+    var tab2LoadEnd = false;
+    var tab3LoadEnd = false;
+    // tab
+    $('.coupon li').on('click',function(){
+        var $this = $(this);
+        itemIndex = $this.index();
+        $this.addClass('active').siblings('li').removeClass('active');
+        $('.lists').eq(itemIndex).show().siblings('.lists').hide();
+
+        // 如果选中菜单一
+        if(itemIndex == '0'){
+            // 如果数据没有加载完
+            if(!tab1LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        // 如果选中菜单二
+        }else if(itemIndex == '1'){
+            if(!tab2LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        }
+        // 重置
+        dropload.resetload();
+    });
+
+    var counter = 0;
+    // 每页展示4个
+    var num = 4;
+    var pageStart = 0,pageEnd = 0;
+
+    // dropload
+    var dropload = $('.coupon').dropload({
+        scrollArea : window,
+        loadDownFn : function(me){
+            // 加载菜单一的数据
+            if(itemIndex == '0'){
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/more.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        counter++;
+                        pageEnd = num * counter;
+                        pageStart = pageEnd - num;
+
+                        if(pageStart <= data.lists.length){
+                            for(var i = pageStart; i < pageEnd; i++){
+                                result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+                                                +'<img src="'+data.lists[i].pic+'" alt="">'
+                                                +'<h3>'+data.lists[i].title+'</h3>'
+                                                +'<span class="date">'+data.lists[i].date+'</span>'
+                                            +'</a>';
+                                if((i + 1) >= data.lists.length){
+                                    // 数据加载完
+                                    tab1LoadEnd = true;
+                                    // 锁定
+                                    me.lock();
+                                    // 无数据
+                                    me.noData();
+                                    break;
+                                }
+                            }
+                            // 为了测试，延迟1秒加载
+                            setTimeout(function(){
+                                $('.lists').eq(0).append(result);
+                                // 每次数据加载完，必须重置
+                                me.resetload();
+                            },1000);
+                        }
+                    },
+                    error: function(xhr, type){
+                        console.log('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            // 加载菜单二的数据
+            }else if(itemIndex == '1'){
+                $.ajax({
+                    type: 'GET',
+                    url: '../public/scripts/json/update.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        for(var i = 0; i < data.lists.length; i++){
+                            result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+                                            +'<img src="'+data.lists[i].pic+'" alt="">'
+                                            +'<h3>'+data.lists[i].title+'</h3>'
+                                            +'<span class="date">'+data.lists[i].date+'</span>'
+                                        +'</a>';
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function(){
+                            $('.lists').eq(1).append(result);
+                            // 每次数据加载完，必须重置
+                            me.resetload();
+                        },1000);
+                    },
+                    error: function(xhr, type){
+                        console.log('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            }
+        }
+    });
+});
 </script>
 <!-- script end -->
 </body>

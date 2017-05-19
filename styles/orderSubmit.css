@@ -429,6 +429,7 @@ html {
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 1;
   width: 100%;
   height: 2.2rem;
   background-color: #fff;
@@ -611,5 +612,81 @@ html {
       outline: none;
       -webkit-appearance: none;
       appearance: none; }
+
+.werapper-coupon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+  background-color: #fff;
+  overflow: auto; }
+  .werapper-coupon .couponList .item {
+    padding: 0 5% 0 8px;
+    margin: 5%;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    background: #fff;
+    background: -webkit-linear-gradient(left, transparent, white, white);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left, transparent, white, white);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left, transparent, white, white);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(left, transparent, white, white);
+    /* 标准的语法 */ }
+    .werapper-coupon .couponList .item .l {
+      padding: 2% 2% 11% 2%;
+      position: relative;
+      flex: 1;
+      background-color: #de5a4c; }
+      .werapper-coupon .couponList .item .l:before {
+        position: absolute;
+        top: 0;
+        left: -4px;
+        content: "";
+        width: 4px;
+        height: 100%;
+        background: url("../images/user/coupon_red_bg.png") repeat-y;
+        background-size: 4px 9.5px; }
+      .werapper-coupon .couponList .item .l p {
+        font: 0.6rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #fff;
+        margin-bottom: 10%; }
+      .werapper-coupon .couponList .item .l h2 {
+        font: bold 1.2rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #fff;
+        text-align: center; }
+      .werapper-coupon .couponList .item .l h3 {
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #fff;
+        text-align: center; }
+    .werapper-coupon .couponList .item .r {
+      padding-left: 3%;
+      flex: 1; }
+      .werapper-coupon .couponList .item .r h3 {
+        font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+        color: #4f4f4f; }
+      .werapper-coupon .couponList .item .r p {
+        font: 0.7rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; }
+        .werapper-coupon .couponList .item .r p:nth-child(2) {
+          color: #a4a4a4; }
+        .werapper-coupon .couponList .item .r p:nth-child(3) {
+          margin-top: 2rem;
+          color: #c6c6c6;
+          font-size: .55rem; }
+    .werapper-coupon .couponList .item .more {
+      width: 1rem;
+      height: 1rem;
+      font-size: 0; }
+      .werapper-coupon .couponList .item .more img {
+        width: 100%; }
+  .werapper-coupon .couponList .itemActive {
+    border: 1px solid #de5a4c;
+    border-left: 0; }
 
 /*# sourceMappingURL=orderSubmit.css.map */

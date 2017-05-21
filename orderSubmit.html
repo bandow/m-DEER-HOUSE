@@ -221,11 +221,44 @@
 	<a href="orderPay.html">提交订单</a>
 </div>
 
+<div class="wrapper-add-list">
+   <header class="header">
+    <a onclick="closeDiv0();" href="javascript:;"></a>
+    <h1>常用入住人</h1>
+  </header>
+  <div class="resident">
+    <div class="add">
+    <a href="javascript:;" onclick="residentA();">
+      <i><img src="images/order/add_icon.png" alt=""></i>
+      <span>添加入住人</span>
+    </a>
+    </div>
+    <div class="item">
+      <div class="t">
+        <p class="user-name">鹿大大</p>
+        <i><img src="images/index/user_red.png" alt=""></i>
+        <i><img src="images/user/test_icon.png" alt=""></i>
+        <p>验证成功</p>
+      </div>
+      <p>身份证号：<em class="user-id">420***********1234</em></p></p>
+    </div>
+    <div class="item">
+      <div class="t">
+        <p class="user-name">鹿大大</p>
+        <i><img src="images/index/user_red.png" alt=""></i>
+        <i><img src="images/user/test_icon.png" alt=""></i>
+        <p>验证成功</p>
+      </div>
+      <p>身份证号：<em class="user-id">440***********1234</em></p>
+    </div>
+  </div>
+</div>
+
 <div class="wrapper-add">
   <header class="header">
     <a onclick="closeDiv();" href="javascript:;"></a>
-    <h1>添加入住人</h1>
-    <a href="orderSubmit.html">确定添加</a>
+    <h2>添加入住人</h2>
+    <a href="javascript:closeDiv();">确定添加</a>
   </header>
   <div class="">
     <div class="add-yo-list">
@@ -271,7 +304,7 @@
 <div class="werapper-coupon">
   <header class="header">
     <a onclick="closeDiv1();" href="javascript:;"></a>
-    <h1>我的优惠券</h1>
+    <h2>我的优惠券</h2>
   </header>
   <div class="couponList">
         <div class="item">
@@ -418,8 +451,10 @@
   $(function(){
 
   $(".check-in").on("click",function(){
-      $(".wrapper-add").show();
+      $(".wrapper-add-list").show();
+      $(".wrapper").hide();
   });
+
 
       var imgW=$(".js_showBox img").width(),
         imgH=$(".js_showBox img").height();
@@ -621,12 +656,27 @@
 	function goback(){
 		window.history.go(-1);
 	}
+   function closeDiv0(){
+    $(".wrapper").show();
+    $(".wrapper-add-list").hide();
+  }
   function closeDiv(){
     $(".wrapper-add").hide();
+    $(".wrapper").hide();
+    $(".wrapper-add-list").show();
   }
   function closeDiv1(){
     $(".werapper-coupon").hide();
     $(".wrapper").show();
+  }
+  function closeDiv2(){
+    $(".wrapper-add-list").hide();
+    $(".wrapper").show();
+  }
+  function residentA(){
+    $(".wrapper-add").show();
+    $(".wrapper-add-list").hide();
+    $(".wrapper").hide();
   }
   function couponMask(){
     $(".werapper-coupon").show();
@@ -637,6 +687,25 @@
       $(this).addClass("itemActive").siblings().removeClass("itemActive");
       $(".couponMoney").text("-"+$(this).find("h2").text());
       closeDiv1();
+    });
+    $(".resident .item").on("click",function(){
+      $(this).addClass("itemActive").siblings().removeClass("itemActive");
+      var userName=$(this).find(".user-name").text();
+      var userId=$(this).find(".user-id").text();
+      var html='<div class="names">';
+          html+='<i class="iconfont icon-jikediancanicon08-copy"><img src="images/order/delete_icon.png" alt=""></i>';
+          html+='<div class="names-right">';
+          html+='<h5>'+userName+'</h5>';
+          html+='<p>身份证号：'+userId+'</p>';
+          html+='</div>';
+          html+='</div>';
+
+      $(".orders-name .name").prepend(html);
+      closeDiv0();
+
+      $(".names i").on("click",function(){
+          $(this).parent().hide();         
+      });
     });
   });
 </script>

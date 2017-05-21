@@ -170,7 +170,7 @@ html {
         transform: rotateZ(-45deg); }
     .header a:last-child img {
       width: 100%; }
-  .header h1 {
+  .header h1, .header h2 {
     flex: 1;
     font: 0.75rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
     color: #4d4d4d;
@@ -612,6 +612,109 @@ html {
       outline: none;
       -webkit-appearance: none;
       appearance: none; }
+
+.wrapper-add-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+  background-color: #f5f5f5;
+  overflow: auto; }
+  .wrapper-add-list .check-in-list {
+    margin-top: .5rem;
+    padding-bottom: .5rem;
+    text-decoration: none;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .wrapper-add-list .check-in-list i {
+      width: 1rem;
+      height: 1rem;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      margin-right: .5rem; }
+      .wrapper-add-list .check-in-list i img {
+        width: 100%; }
+    .wrapper-add-list .check-in-list span {
+      font: .8rem/1.5 "Microsoft YaHei";
+      color: #de5a4c; }
+  .wrapper-add-list .resident .add {
+    padding: 2% 0;
+    margin: .5rem 0 10% 0;
+    background: #fff; }
+    .wrapper-add-list .resident .add a {
+      text-decoration: none;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .wrapper-add-list .resident .add a i {
+        width: .6rem;
+        height: .6rem;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        margin-right: .5rem; }
+        .wrapper-add-list .resident .add a i img {
+          width: 100%; }
+      .wrapper-add-list .resident .add a span {
+        font: .6rem/1.5 "Microsoft YaHei";
+        color: #de5a4c; }
+  .wrapper-add-list .resident .item {
+    position: relative;
+    padding: 5% 10% 5% 5%;
+    margin: .5rem 0;
+    background: #fff; }
+    .wrapper-add-list .resident .item .t {
+      display: -webkit-flex;
+      display: flex;
+      align-items: center; }
+      .wrapper-add-list .resident .item .t p:first-child {
+        font: .7rem/1.5 "Microsoft YaHei";
+        color: #000; }
+      .wrapper-add-list .resident .item .t p:last-child {
+        font: .55rem/1.5 "Microsoft YaHei";
+        color: #10a46e; }
+      .wrapper-add-list .resident .item .t i {
+        width: .5rem;
+        height: .5rem;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .wrapper-add-list .resident .item .t i img {
+          width: 100%; }
+        .wrapper-add-list .resident .item .t i:nth-child(2) {
+          margin: 0 0 0 .2rem; }
+        .wrapper-add-list .resident .item .t i:nth-child(3) {
+          margin: 0 .2rem 0 .5rem; }
+    .wrapper-add-list .resident .item > p {
+      font: .55rem/1.5 "Microsoft YaHei";
+      color: #696969; }
+    .wrapper-add-list .resident .item:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      margin-top: -5px;
+      width: 10px;
+      height: 10px;
+      border: 2px solid;
+      border-bottom: 0;
+      border-right: 0;
+      color: #ccc;
+      -moz-transform: rotateZ(135deg);
+      -o-transform: rotateZ(135deg);
+      -ms-transform: rotateZ(135deg);
+      -webkit-transform: rotateZ(135deg);
+      transform: rotateZ(135deg); }
+  .wrapper-add-list .resident .itemActive {
+    border: 1px solid red; }
 
 .werapper-coupon {
   position: fixed;

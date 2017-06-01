@@ -154,7 +154,7 @@
   <section class="businessInfo">
     <h3>交易信息</h3>
     <p><span>订单总额</span><span>¥498.00</span></p>
-    <p><span>优惠券</span><span>-¥100</span></p>
+    <p onclick="couponMask()"><span>优惠券</span><span class="couponMoney">-¥100</span></p>
     <p><span>折扣</span><span>- ¥98</span></p>
     <p><span>实际支付</span><span>¥300</span></p>
   </section> 
@@ -178,6 +178,76 @@
   </footer>
 </div>
 
+<div class="werapper-coupon">
+  <header class="header">
+    <a onclick="closeDiv1();" href="javascript:;"></a>
+    <h2>我的优惠券</h2>
+  </header>
+  <div class="couponList">
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥100</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥200</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥300</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="l">
+            <p>有效</p>
+            <h2>¥400</h2>
+            <h3>优惠券</h3>
+          </div>
+          <div class="r">
+            <h3>新人券</h3>
+            <p>每满¥500可用</p>
+            <p>2017.04.20 23:59 到期</p>
+          </div>
+          <div class="more">
+            <a href="javascript:;"><img src="images/user/coupon_more.png" alt=""></a>
+          </div>
+        </div>
+  </div>
+</div>
+
+
 
 <!-- script begin -->
 <script src="scripts/jquery-1.12.2.min.js" ></script>
@@ -188,7 +258,20 @@
     $(".pay ul li i").on("click",function(){
       $(this).parent().addClass("active").siblings().removeClass("active");
     });
+    $(".couponList .item").on("click",function(){
+      $(this).addClass("itemActive").siblings().removeClass("itemActive");
+      $(".couponMoney").text("-"+$(this).find("h2").text());
+      closeDiv1();
+    });
   });   
+  function couponMask(){
+    $(".werapper-coupon").show();
+    $(".wrapper").hide();
+  }
+  function closeDiv1(){
+    $(".werapper-coupon").hide();
+    $(".wrapper").show();
+  }
 	//返回上一页
 	function goback(){
 		window.history.go(-1);

@@ -1139,6 +1139,7 @@
 						top: 0,
 						bottom: 0,
 						right:0,
+						zIndex:4,
 						// left: offset.left - containerOffset.left,
 						left:0,
 						background: 'rgba(0,0,0,.5)'
@@ -1156,6 +1157,7 @@
 							bottom: 0,
 							right:0,
 							left:0,
+							zIndex:4,
 							// left: offset.left,
 							background: 'rgba(0,0,0,.5)'
 						});
@@ -1170,6 +1172,7 @@
 							bottom: 0,
 							right:0,
 							left:0,
+							zIndex:4,
 							// left: offset.left + $(self).width() - box.width() - 16,
 							background: 'rgba(0,0,0,.5)'
 						});

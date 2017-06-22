@@ -139,17 +139,20 @@
 			<a href="javascript:;"></a>
 			<p><i><img src="images/newIndex/index_icon1.png" alt=""></i><span>清除全部</span></p>
 		</div>
-		<a href="#" class="item">
+		<a href="javascript:;" class="item click-a click-item">
 			<i><img src="images/newIndex/index_icon2.png" alt=""></i><span>搜索你的鹿驻</span>
 		</a>
-		<div class="item" id="date">
+		<a href="search.html" class="item item-on">
+			<i><img src="images/newIndex/index_icon2.png" alt=""></i><span>搜索你的鹿驻</span>
+		</a>
+		<div class="item item-on" id="date">
 			<i><img src="images/newIndex/index_icon3.png" alt=""></i>
 			<!-- <span>任何时间</span> -->
 			<p><span id="checkInDay" class="check-in-day">08月17日</span><span>入住</span></p>
 			<p style="margin-left:10px"><span id="checkOutDay" class="check-out-day">08月20日</span><span>离店</span></p>
 		</div>
-		<a href="#" class="item">
-			<i><img src="images/newIndex/index_icon4.png" alt=""></i><span>1位</span>
+		<a href="javascript:;" class="num item item-on">
+			<i><img src="images/newIndex/index_icon4.png" alt=""></i><span><em class="item-member">1</em>位</span>
 		</a>
 	</header>
 	<div class="swiper-container swiper1">
@@ -365,6 +368,18 @@
 			<span>招募房东</span>
 		</a>
 	</div>
+</div>
+<div class="member-warpper">
+	<div class="top">
+		<p>入住人</p>
+		<div class="r">
+			<i class="i-l"><img src="images/newIndex/delete_icon.png" alt=""></i>
+			<span class="lr-number">1</span>
+			<i class="i-r"><img src="images/newIndex/add_icon.png" alt=""></i>
+		</div>
+	</div>
+	<button id="memberBut">搜索</button>
+	<div class="close"><img src="images/newIndex/close.png" alt=""></div>
 </div>
 <!-- script begin -->
 <script src="scripts/jquery-1.12.2.min.js"></script>
@@ -606,6 +621,68 @@
           iLastTouch = iNow;
       }, false);
   }
+</script>
+<script>
+	$(".click-item").on("touchstart",function(){
+		$(this).removeClass("click-item");
+		$(".header .item-on").addClass("active");
+		$(".header .top").addClass("active");
+	});
+	$(".header .top a").on("touchstart",function(){
+		$(".click-a").toggleClass("click-item");
+		$(".header .item-on").toggleClass("active");
+	})
+	$(".header .top p").on("touchstart",function(){
+		$(".header .item-on").removeClass("active");
+		$(".header .top").removeClass("active");
+		$(".click-a").addClass("click-item");
+	})
+
+	var iR=$(".lr-number").text();
+	$(".i-r").on("touchstart",function(){
+		if(iR>=10){
+			$(".lr-number").text(10);
+		}else{
+			iR++;
+			$(".lr-number").text(iR);
+		}
+
+	})
+	$(".i-l").on("touchstart",function(){	
+		if(iR<=0){
+			$(".lr-number").text(0);
+		}else{
+			iR--;
+			$(".lr-number").text(iR);
+		}	
+	})
+   
+    $("#memberBut").on("touchstart",function(){
+    	$(".item-member").text(iR);
+    	$(".member-warpper").removeClass("member-warpper-active");
+    	$(".sgo-warpper").css({
+	    	overflow: 'hidden',
+			height: 'auto'
+    	});
+    })
+
+    $(".num").on("touchstart",function(){
+    	$(".member-warpper").addClass("member-warpper-active");
+    	$(".sgo-warpper").css({
+	    	overflow: 'hidden',
+			height: '100%'
+    	});
+    })
+    
+    $(".member-warpper .close").on("touchstart",function(){
+    	$(".member-warpper").removeClass("member-warpper-active");
+    	$(".sgo-warpper").css({
+	    	overflow: 'hidden',
+			height: 'auto'
+    	});
+    })
+
+	
 </script>
 <!-- script end -->
 </body>

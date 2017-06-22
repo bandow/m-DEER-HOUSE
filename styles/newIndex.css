@@ -129,7 +129,8 @@ a {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  display: none; }
 
 .header .top a {
   position: relative;
@@ -171,6 +172,7 @@ a {
   color: #fff; }
 
 .header .item {
+  display: none;
   padding: 5px 15px;
   margin: 0 40px 10px 40px;
   background: rgba(255, 255, 255, 0.8);

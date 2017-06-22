@@ -89,6 +89,7 @@ a{text-decoration:none;}
   display:flex;
   align-items:center;
   justify-content:space-between;
+  display:none;
 }
 .header .top a{
   position:relative;
@@ -130,6 +131,7 @@ a{text-decoration:none;}
   color:#fff;
 }
 .header .item{
+  display:none;
   padding:5px 15px;
   margin:0 40px 10px 40px;
   background:rgba(255,255,255,.8);

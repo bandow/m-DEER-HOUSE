@@ -16,14 +16,18 @@
 <link rel="stylesheet" href="styles/swiper-3.4.2.min.css">
 <link rel="stylesheet" href="styles/daterangepicker.css">
 <style>
+#date-range12-container{
+    -webkit-user-select:text;
+ }
 	.date-picker-wrapper.inline-wrapper {
 	    position: initial !important;
 	    box-shadow: none;
 	    display: inline-block;
+      -webkit-user-select:inherit;
 	}
 	.swiper-pagination{color:#fff;text-align:right;padding:0 5%;font-size:.6rem;}
 	.date-picker-wrapper {
-      position:absolute;
+     position:absolute;
       z-index: 1;
       border: none;
       background-color: #fff;
@@ -34,7 +38,7 @@
       font-family: Arial,sans-serif;
       box-shadow: none;
       box-sizing: initial;
-      overflow-y:auto;
+       /*overflow-y:auto;*/
   }
   .date-picker-wrapper .month-wrapper table .day.lalala { background-color:orange; }
   .options { display:none; border-left:6px solid #8ae; padding:10px; font-size:12px; line-height:1.4; background-color:#eee; border-radius:4px;}
